@@ -1,6 +1,6 @@
 ### Hey there 👋👀
 
-I'm David.
+I'm David Joseph.
 
 ### Skills
 
