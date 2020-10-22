@@ -14,4 +14,4 @@ I am currently pursuing my B.Tech in Computer Science and Engineering with speci
 
 ### Misc
 
-I play guitar, piano and sing too. I listen to a lot of music.
+I play guitar, piano and sing too. I listen to a lot of rock and emo music.
