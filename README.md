@@ -6,7 +6,7 @@ I'm David Joseph.
 
 I am used to programming basic algorithms in C/C++. 
 
-I am learning Web Development through an [online course](https://www.udemy.com/course/the-complete-web-development-bootcamp/). So far I have learnt to use HTML5, CSS and Bootstrap to create beautiful and responsive websites.
+I am learning Web Development through [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/). So far I have learnt to use HTML5, CSS and Bootstrap to create beautiful and responsive websites.
 
 ### Education
 
