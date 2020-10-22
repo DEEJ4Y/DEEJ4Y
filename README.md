@@ -1,16 +1,17 @@
-### Hi there 👋
+### Hey there 👋👀
 
-<!--
-**davidjosephind/davidjosephind** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm David.
 
-Here are some ideas to get you started:
+### Education
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I am currently pursuing my B.Tech in Computer Science and Engineering with specialization in Internet of Things.
+
+### Skills
+
+I am used to programming basic algorithms in C/C++. 
+
+I am learning Web Development through an [online course](https://www.udemy.com/course/the-complete-web-development-bootcamp/). So far I have learnt to use HTML5, CSS and Bootstrap to create beautiful and responsive websites.
+
+### Misc
+
+I play guitar, piano and sing too. I listen to a lot of music.
