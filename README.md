@@ -15,3 +15,8 @@ I am currently pursuing my B.Tech in Computer Science and Engineering with speci
 ### Misc
 
 I play guitar, piano and sing too. I listen to a lot of rock and emo music.
+
+### Contact Me
+
+[My Personal Website](https://davidjosephind.github.io/Stylized-Personal-Website/).
+[Linkedin](https://www.linkedin.com/in/david-joseph-75a7b71b5/)
