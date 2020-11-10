@@ -12,7 +12,7 @@ I am learning Web Development through [The 2020 Web Development Bootcamp](https:
 
 I am currently pursuing my B.Tech in Computer Science and Engineering with specialization in Internet of Things.
 
-### Music is my passion
+### Music
 
 I play guitar, piano and sing too. I listen to a lot of rock and emo music.
 
