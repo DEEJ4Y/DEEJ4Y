@@ -6,7 +6,7 @@ I'm David Joseph.
 
 I am used to programming basic algorithms in C/C++. I practiced programming on [Hackerrank](https://www.hackerrank.com/DEEJ4Y).
 
-I am learning Web Development through [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/). I am a budding full stack web developer and have learnt to use HTML 5, CSS 3, Bootstrap 4, JavaScript ES6 and jQuery 3 to make nice and responsive websites. I am currently learning Node.js and Express.js to start my journey in backend web development.
+I am learning Web Development through [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/). I am a budding full stack web developer and have learnt to use HTML 5, CSS 3, Bootstrap 4, JavaScript and jQuery 3 to make nice and responsive websites. I am currently learning Node.js and Express.js to start my journey in backend web development.
 
 ### Education
 
