@@ -14,6 +14,7 @@ Tech:
 - HTML
 - CSS
 - Bootstrap 5
+- Responsive web design
 - MongoDB
 - MariaDB
 - Deploying to Heroku
