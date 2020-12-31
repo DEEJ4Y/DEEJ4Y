@@ -8,13 +8,13 @@ Currently attending [The 2020 Web Development Bootcamp](https://www.udemy.com/co
 
 Tech:
 
-| Backend          | Database | Frontend    | Bonus                             |
-| :--------------- | :------- | :---------- | :-------------------------------- |
-| Node.js          | MongoDB  | JavaScript  | Deploying to Heroku               |
-| Express.js       | Mongoose | Bootstrap 5 | Responsive Web Design/Development |
-| Basic REST API's |          | HTML        | Git                               |
-|                  |          | CSS         | Bash CLI (basic)                  |
-|                  |          | jQuery      |                                   |
+| **Backend**      | **Database** | **Frontend** | **Bonus**                         |
+| :--------------- | :----------- | :----------- | :-------------------------------- |
+| Node.js          | MongoDB      | JavaScript   | Deploying to Heroku               |
+| Express.js       | Mongoose     | Bootstrap 5  | Responsive Web Design/Development |
+| Basic REST API's |              | HTML         | Git                               |
+|                  |              | CSS          | Bash CLI (basic)                  |
+|                  |              | jQuery       |                                   |
 
 ## Contact Me
 
