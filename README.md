@@ -1,8 +1,8 @@
-### Hey there 👋👀
+# Hey there 👋👀
 
-I'm David Joseph.
+I'm David "DEEJ4Y" Joseph.
 
-### Skills
+## Skills
 
 Currently attending [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 Tech:
@@ -22,6 +22,6 @@ Tech:
 - Git
 - jQuery
 
-### Contact Me
+## Contact Me
 
 [Linkedin](https://www.linkedin.com/in/david-joseph-75a7b71b5/) | [My Personal Website](https://DEEJ4Y.github.io/Stylized-Personal-Website/)
