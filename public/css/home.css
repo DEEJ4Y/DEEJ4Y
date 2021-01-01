@@ -49,14 +49,6 @@ body {
   border-bottom-color: #fff;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
 .img-bg {
   display: none;
 }
@@ -67,23 +59,5 @@ body {
 }
 
 .px-3 {
-  padding: 1rem 0 0 0;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-  .img-bg {
-    display: inline;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .img-sp {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
+  padding-top: 1rem;
 }

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>David Joseph</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/home.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-light bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div class="navb">
+                <h3 class="float-md-start mb-0">DJ</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <form id="home-form" class="nav-link" action="/" method="POST">
+                        <input type="hidden" name="requestedPage" value="home">
+                        <a onclick="document.getElementById('home-form').submit();">Home</a>
+                    </form>
+                    <form id="projects-form" class="nav-link active" action="/" method="POST">
+                        <input type="hidden" name="requestedPage" value="projects">
+                        <a onclick="document.getElementById('projects-form').submit();">Projects</a>
+                    </form>
+                    <form id="contact-form" class="nav-link" action="/" method="POST">
+                        <input type="hidden" name="requestedPage" value="contact">
+                        <a onclick="document.getElementById('contact-form').submit();">Contact</a>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <footer class="mt-auto text-white-50">
+            <p>© 2021 David Joseph</p>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+        <script src="js/home.js"></script>
+    </div>
+
+</body>
+
+</html>
