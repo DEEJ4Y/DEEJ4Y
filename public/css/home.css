@@ -1,6 +1,9 @@
 /*
  * Globals
  */
+a {
+  text-decoration: none;
+}
 
 /* Custom default button */
 .btn-secondary,
@@ -49,6 +52,11 @@ body {
   border-bottom-color: #fff;
 }
 
+/* misc */
+.m-top {
+  margin-top: 1rem;
+}
+
 .img-bg {
   display: none;
 }
@@ -60,4 +68,8 @@ body {
 
 .px-3 {
   padding-top: 1rem;
+}
+
+.social {
+  margin: 0 0.25rem;
 }

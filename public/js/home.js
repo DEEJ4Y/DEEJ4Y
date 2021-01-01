@@ -1,1 +1,1 @@
-$("body").hide().fadeIn(2000);
+$("body").hide().fadeIn(1000);
