@@ -18,6 +18,7 @@ mongoose.connect(
 );
 
 const projectSchema = new mongoose.Schema({
+  routeName: String,
   name: String,
   info: String,
   url: String,
@@ -34,6 +35,13 @@ app
   .post((req, res) => {
     const requestedPage = req.body.requestedPage;
     if (requestedPage == "projects") {
+      Project.find((err, projects) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(projects);
+        }
+      });
       res.render("projects.ejs");
     } else if (requestedPage == "contact") {
       res.render("contact.ejs");
