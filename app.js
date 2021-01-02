@@ -3,6 +3,7 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const fs = require("fs");
 
 const app = express();
 
@@ -16,17 +17,6 @@ mongoose.connect(
     "@cluster0.u7o6u.mongodb.net/ProjectsDB?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
-
-const projectSchema = new mongoose.Schema({
-  routeName: String,
-  name: String,
-  info: String,
-  url: String,
-  type: String,
-});
-
-const Project = mongoose.model("Project", projectSchema);
-
 app
   .route("/")
   .get((req, res) => {
@@ -35,14 +25,8 @@ app
   .post((req, res) => {
     const requestedPage = req.body.requestedPage;
     if (requestedPage == "projects") {
-      Project.find((err, projects) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(projects);
-        }
-      });
-      res.render("projects.ejs");
+      const projects = JSON.parse(fs.readFileSync("projects.json"));
+      res.render("projects.ejs", { projects: projects });
     } else if (requestedPage == "contact") {
       res.render("contact.ejs");
     } else if (requestedPage == "home") {
