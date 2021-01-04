@@ -18,4 +18,4 @@ Tech:
 
 ## Contact Me
 
-[Linkedin](https://www.linkedin.com/in/david-joseph-75a7b71b5/) | [My Personal Website](https://DEEJ4Y.github.io/Stylized-Personal-Website/)
+[Linkedin](https://www.linkedin.com/in/david-joseph-75a7b71b5/) | [My Personal Website](https://deej4y.github.io/DEEJ4Y/)
