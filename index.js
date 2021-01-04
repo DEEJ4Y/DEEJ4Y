@@ -131,6 +131,25 @@ projects.forEach((project) => {
   );
 });
 
+$(function () {
+  $("body").swipe({
+    //Generic swipe handler for all directions
+    swipe: function (
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+      $(this).text(direction);
+    },
+  });
+
+  //Set some options later
+  // $("#test").swipe({ fingers: 2 });
+});
+
 // State variable legend
 const states = {
   home: 0,
