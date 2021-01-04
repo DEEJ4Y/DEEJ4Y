@@ -1,39 +1,3 @@
-$("#projects").hide();
-$("#contact").hide();
-
-// State variable legend
-const states = {
-  home: 0,
-  projects: 1,
-  contact: 2,
-};
-
-function useState(state) {
-  if (state == states.projects) {
-    $("#home").hide();
-    $("#projects").show();
-    $("#contact").hide();
-    removeActiveLink();
-    $("#link-projects").addClass("active");
-  } else if (state == states.contact) {
-    $("#home").hide();
-    $("#projects").hide();
-    $("#contact").show();
-    removeActiveLink();
-    $("#link-contact").addClass("active");
-  } else {
-    $("#home").show();
-    $("#projects").hide();
-    $("#contact").hide();
-    removeActiveLink();
-    $("#link-home").addClass("active");
-  }
-}
-
-function removeActiveLink() {
-  $(".nav-link.active").removeClass("active");
-}
-
 const projects = [
   {
     _id: "5ff015f9d7c211e04161023d",
@@ -154,3 +118,61 @@ const projects = [
     __v: 0,
   },
 ];
+
+$("#projects").hide();
+$("#contact").hide();
+projects.forEach((project) => {
+  $(".projects-list").append(
+    "<h3>" +
+      project.name +
+      "</h3><p class='project-info'>" +
+      project.info +
+      "</p>"
+  );
+});
+
+// State variable legend
+const states = {
+  home: 0,
+  projects: 1,
+  contact: 2,
+};
+
+function useState(state) {
+  if (state == states.projects) {
+    useProjectsState();
+  } else if (state == states.contact) {
+    useContactState();
+    $("#link-contact").addClass("active");
+  } else {
+    useHomeState();
+  }
+}
+
+function useHomeState() {
+  $("#home").show();
+  $("#projects").hide();
+  $("#contact").hide();
+  removeActiveLink();
+  $("#link-home").addClass("active");
+}
+
+function useProjectsState() {
+  $("#home").hide();
+  $("#projects").show();
+  $("#contact").hide();
+  removeActiveLink();
+  $("#link-projects").addClass("active");
+}
+
+function useContactState() {
+  $("#home").hide();
+  $("#projects").hide();
+  $("#contact").show();
+  removeActiveLink();
+  $("#link-contact").addClass("active");
+}
+
+function removeActiveLink() {
+  $(".nav-link.active").removeClass("active");
+}
