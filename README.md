@@ -4,8 +4,6 @@ I'm David "DEEJ4Y" Joseph.
 
 ## Skills
 
-Currently attending [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
-
 Tech:
 
 | **Backend**      | **Database** | **Frontend** | **Bonus**                         |
@@ -15,6 +13,8 @@ Tech:
 | Basic REST API's |              | HTML         | Git                               |
 |                  |              | CSS          | Bash CLI (basic)                  |
 |                  |              | jQuery       |                                   |
+
+Currently attending [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 
 ## Contact Me
 

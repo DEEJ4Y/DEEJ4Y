@@ -78,7 +78,12 @@ p {
   text-align: left;
 }
 
+.project-name {
+  font-size: 1.75rem;
+}
+
 .project-info {
+  font-size: 1rem;
   margin: 0 0 2rem 0;
 }
 

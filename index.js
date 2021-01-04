@@ -123,9 +123,9 @@ $("#projects").hide();
 $("#contact").hide();
 projects.forEach((project) => {
   $(".projects-list").append(
-    "<h3>" +
+    "<h3 class='project-name'>" +
       project.name +
-      "</h3><p class='project-info'>" +
+      "</h3><p class='lead project-info'>" +
       project.info +
       "</p>"
   );
@@ -185,7 +185,6 @@ function removeActiveLink() {
 
 $(() => {
   $("body").swipe({
-    //Generic swipe handler for all directions
     swipe: (event, direction, distance, duration, fingerCount, fingerData) => {
       console.log(direction);
       if (direction == "left") {
