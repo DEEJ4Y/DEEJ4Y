@@ -131,25 +131,6 @@ projects.forEach((project) => {
   );
 });
 
-$(function () {
-  $("body").swipe({
-    //Generic swipe handler for all directions
-    swipe: function (
-      event,
-      direction,
-      distance,
-      duration,
-      fingerCount,
-      fingerData
-    ) {
-      $(this).text(direction);
-    },
-  });
-
-  //Set some options later
-  // $("#test").swipe({ fingers: 2 });
-});
-
 // State variable legend
 const states = {
   home: 0,
@@ -157,7 +138,10 @@ const states = {
   contact: 2,
 };
 
+let currentState = 0;
+
 function useState(state) {
+  currentState = state;
   if (state == states.projects) {
     useProjectsState();
   } else if (state == states.contact) {
@@ -169,6 +153,7 @@ function useState(state) {
 }
 
 function useHomeState() {
+  currentState = states.home;
   $("#home").show();
   $("#projects").hide();
   $("#contact").hide();
@@ -177,6 +162,7 @@ function useHomeState() {
 }
 
 function useProjectsState() {
+  currentState = states.projects;
   $("#home").hide();
   $("#projects").show();
   $("#contact").hide();
@@ -185,6 +171,7 @@ function useProjectsState() {
 }
 
 function useContactState() {
+  currentState = states.contact;
   $("#home").hide();
   $("#projects").hide();
   $("#contact").show();
@@ -195,3 +182,17 @@ function useContactState() {
 function removeActiveLink() {
   $(".nav-link.active").removeClass("active");
 }
+
+$(() => {
+  $("body").swipe({
+    //Generic swipe handler for all directions
+    swipe: (event, direction, distance, duration, fingerCount, fingerData) => {
+      console.log(direction);
+      if (direction == "left") {
+        useState(currentState + 1);
+      } else if (direction == "right") {
+        useState(currentState - 1);
+      }
+    },
+  });
+});
