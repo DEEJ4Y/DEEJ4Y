@@ -1,6 +1,6 @@
 # Hey there 👋👀
 
-I'm David "DEEJ4Y" Joseph.
+I'm David Joseph.
 
 ## Skills
 
@@ -8,13 +8,13 @@ Tech:
 
 | **Backend**      | **Database** | **Frontend** | **Bonus**                         |
 | :--------------- | :----------- | :----------- | :-------------------------------- |
-| Node.js          | MongoDB      | JavaScript   | Deploying to Heroku               |
+| Node.js          | MongoDB      | React        | Deploying to Heroku               |
 | Express.js       | Mongoose     | Bootstrap 5  | Responsive Web Design/Development |
-| Basic REST API's |              | HTML         | Git                               |
-|                  |              | CSS          | Bash CLI (basic)                  |
-|                  |              | jQuery       |                                   |
+| Basic REST API's |              | jQuery       | Git                               |
+|                  |              | CSS          |                                   |
+|                  |              | HTML         |                                   |
 
-Currently attending [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
+Completed [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 
 ## Contact Me
 
