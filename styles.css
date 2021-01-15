@@ -91,6 +91,10 @@ p {
   padding-top: 1rem;
 }
 
+small {
+  font-size: 1rem;
+}
+
 .social {
   margin: 0 0.25rem;
 }

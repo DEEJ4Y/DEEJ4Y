@@ -1,5 +1,11 @@
 const projects = [
   {
+    routeName: "keeper-app",
+    name: "React Keeper App",
+    info: "A google keep clone made using React.",
+    type: "Frontend",
+  },
+  {
     _id: "5ff015f9d7c211e04161023d",
     routeName: "secrets",
     name: "Secrets",
@@ -7,6 +13,16 @@ const projects = [
       "Post your secrets anonymously. Complete with  authentication using Google OAuth 2.0, local authentication, sessions and cookies using the passport.js library.",
     url: "/projects/secrets",
     type: "Full Stack",
+  },
+  {
+    _id: "5ff01df28b0cbc26ecfe6c77",
+    routeName: "wikiapi",
+    name: "Wikipedia style API",
+    info:
+      "A RESTful API. Find articles, post your own and even update an article, all by using an API.",
+    url: "/projects/wikiapi",
+    type: "Backend",
+    __v: 0,
   },
   {
     _id: "5ff01df28b0cbc26ecfe6c79",
@@ -88,16 +104,6 @@ const projects = [
     __v: 0,
   },
   {
-    _id: "5ff01df28b0cbc26ecfe6c77",
-    routeName: "wikiapi",
-    name: "Wikipedia style API",
-    info:
-      "A RESTful API. Find articles, post your own and even update an article, all by using an API.",
-    url: "/projects/wikiapi",
-    type: "Backend",
-    __v: 0,
-  },
-  {
     _id: "5ff01df28b0cbc26ecfe6c7f",
     routeName: "tindog",
     name: "Tindog",
@@ -125,7 +131,10 @@ projects.forEach((project) => {
   $(".projects-list").append(
     "<h3 class='project-name'>" +
       project.name +
-      "</h3><p class='lead project-info'>" +
+      " <small>- " +
+      project.type +
+      "</small></h3>" +
+      "<p class='lead project-info'>" +
       project.info +
       "</p>"
   );
