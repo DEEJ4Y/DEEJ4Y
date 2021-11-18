@@ -72,7 +72,8 @@ body {
 @media (max-width: 576px) {
   .float-end {
     float: none !important;
-    /* display: block; */
+    font-size: 14px;
+    font-style: italic;
     text-align: left;
   }
 
