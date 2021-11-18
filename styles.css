@@ -59,6 +59,14 @@ body {
   user-select: none;
 }
 
+/* 
+* Misc
+*/
+
+.project-name {
+  font-family: serif;
+}
+
 .project-stack {
   display: inline;
 }
