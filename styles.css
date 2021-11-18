@@ -59,8 +59,24 @@ body {
   user-select: none;
 }
 
+.project-stack {
+  display: inline;
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .float-end {
+    float: none !important;
+    /* display: block; */
+    text-align: left;
+  }
+
+  .project-stack {
+    display: block;
   }
 }
