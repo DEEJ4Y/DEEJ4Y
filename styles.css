@@ -20,7 +20,7 @@ body {
   background-image: url(background-image.webp);
   background-blend-mode: overlay;
   background-position: 0px 0px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   animation: animatedBackground 200s linear infinite alternate;
 }
 
