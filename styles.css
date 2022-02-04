@@ -20,8 +20,9 @@ body {
   background-image: url(background-image.jpg);
   background-blend-mode: overlay;
   background-position: 0px 0px;
+  background-size: cover;
   background-repeat: repeat-x;
-  animation: animatedBackground 200s linear infinite alternate;
+  animation: animatedBackground 45s linear infinite alternate;
 }
 
 .cover-container {
