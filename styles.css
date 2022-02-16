@@ -21,10 +21,6 @@ body {
   background-blend-mode: soft-light;
   background-position: 0px 0px;
   background-repeat: repeat;
-  animation: animatedBackground 200s linear infinite alternate;
-}
-
-.home {
   background-size: cover;
   animation: animatedBackground 45s linear infinite alternate;
 }
