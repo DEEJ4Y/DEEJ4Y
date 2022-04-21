@@ -1,3 +1,9 @@
+import Title from "../components/Home/Title/Title";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <Title />
+    </div>
+  );
 }

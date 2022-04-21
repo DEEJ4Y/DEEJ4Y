@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import Head from "next/head";
 import { assetPrefix } from "../../../next.config";
+import Footer from "../Footer/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -41,11 +42,12 @@ export default function Layout({ children }) {
         <link
           rel="icon"
           type="image/x-icon"
-          href={assetPrefix ? assetPrefix + "/favicon.ico" : "/favicon.ico"}
+          href={assetPrefix ? assetPrefix + "/favicon.png" : "/favicon.png"}
         ></link>
       </Head>
       <Navbar />
       <div>{children || ""}</div>
+      <Footer />
     </>
   );
 }

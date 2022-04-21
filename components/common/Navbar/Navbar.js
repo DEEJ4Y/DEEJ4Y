@@ -12,6 +12,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { ChevronDown } from "tabler-icons-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -71,10 +72,12 @@ export const links = [
       { link: "/projects/learning", label: "Learning" },
     ],
   },
+  { link: "/highlights", label: "Highlights" },
   { link: "/about", label: "About" },
 ];
 
 export default function Navbar() {
+  const [current, setCurrent] = useState(null);
   const [opened, handlers] = useDisclosure(false);
   const { classes } = useStyles();
   const theme = useMantineTheme();
@@ -94,12 +97,15 @@ export default function Navbar() {
           transitionDuration={0}
           placement="end"
           gutter={1}
-          opened={opened}
+          opened={current === link.label ? true : false}
           control={
             <a
               href={link.link}
               className={classes.link}
-              onMouseEnter={handlers.open}
+              onMouseEnter={() => {
+                setCurrent(() => link.label);
+                handlers.open();
+              }}
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
@@ -108,20 +114,36 @@ export default function Navbar() {
             </a>
           }
         >
-          <div onMouseLeave={handlers.close}>{menuItems}</div>
+          <div
+            onMouseLeave={() => {
+              setCurrent(() => "");
+
+              handlers.close();
+            }}
+          >
+            {menuItems}
+          </div>
         </Menu>
       );
     }
 
     return (
       <Link key={link.label} passHref href={link.link}>
-        <a className={classes.link}>{link.label}</a>
+        <a
+          className={classes.link}
+          onMouseEnter={() => {
+            setCurrent(() => link.label);
+            handlers.open();
+          }}
+        >
+          {link.label}
+        </a>
       </Link>
     );
   });
 
   return (
-    <Header height={56} className={classes.header} mb={120}>
+    <Header height={56} className={classes.header}>
       <Container>
         <div className={classes.inner}>
           <Text
