@@ -13,6 +13,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { ChevronDown } from "tabler-icons-react";
 import Link from "next/link";
 import { useState } from "react";
+import styles from "./Navbar.module.css";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -108,7 +109,15 @@ export default function Navbar() {
               }}
             >
               <Center>
-                <span className={classes.linkLabel}>{link.label}</span>
+                <span
+                  className={`${classes.linkLabel}${
+                    link.label === "Projects"
+                      ? ` ${styles.animateCharcter}`
+                      : ""
+                  }`}
+                >
+                  {link.label}
+                </span>
                 <ChevronDown size={12} />
               </Center>
             </a>
