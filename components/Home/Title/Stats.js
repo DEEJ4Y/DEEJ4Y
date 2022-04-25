@@ -1,5 +1,10 @@
 import React from "react";
 import { createStyles, Text } from "@mantine/core";
+import {
+  DeviceDesktopAnalytics,
+  GitCommit,
+  UserCheck,
+} from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -63,18 +68,21 @@ const statsData = [
     stats: "2500+",
     description:
       "Collaborated on multiple projects using Github, Gitlab and Bitbucket.",
+    Icon: GitCommit,
   },
   {
     title: "Major Projects",
     stats: "11",
     description:
       "Developed 11 major projects, including 1 npm package, 3 team projects and 7 personal projects.",
+    Icon: DeviceDesktopAnalytics,
   },
   {
     title: "Years Experience",
     stats: "1.5+",
     description:
       "Developing websites and web apps for more than a year and a half.",
+    Icon: UserCheck,
   },
 ];
 
@@ -83,7 +91,9 @@ export default function StatsGroup() {
   const { classes } = useStyles();
   const stats = data.map((stat) => (
     <div key={stat.title} className={classes.stat}>
-      <Text className={classes.count}>{stat.stats}</Text>
+      <Text className={classes.count}>
+        <stat.Icon size={26} /> {stat.stats}
+      </Text>
       <Text className={classes.title}>{stat.title}</Text>
       <Text className={classes.description}>{stat.description}</Text>
     </div>

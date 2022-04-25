@@ -1,19 +1,21 @@
 import {
+  Burger,
+  Button,
+  Center,
+  Container,
   createStyles,
+  Drawer,
+  Group,
   Header,
   Menu,
-  Group,
-  Center,
-  Burger,
-  Container,
   Text,
   useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { ChevronDown } from "tabler-icons-react";
+import { Books, Briefcase, ChevronDown, User, Users } from "tabler-icons-react";
 import Link from "next/link";
 import { useState } from "react";
-import styles from "./Navbar.module.css";
+import ToggleColorScheme from "../ToggleColorScheme/ToggleColorScheme";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -67,19 +69,43 @@ export const links = [
     link: "/projects",
     label: "Projects",
     links: [
-      { link: "/projects/freelancing", label: "Freelance" },
-      { link: "/projects/team", label: "Team" },
-      { link: "/projects/personal", label: "Personal" },
-      { link: "/projects/learning", label: "Learning" },
+      {
+        link: "/projects/freelancing",
+        label: "Freelance",
+        Icon: Briefcase,
+        description: "I am currently working on one Freelance project.",
+      },
+      {
+        link: "/projects/team",
+        label: "Team",
+        Icon: Users,
+        description: "I have worked on 9 team projects.",
+      },
+      {
+        link: "/projects/personal",
+        label: "Personal",
+        Icon: User,
+        description: "I have completed 9 personal projects.",
+      },
+      {
+        link: "/projects/learning",
+        label: "Learning",
+        Icon: Books,
+        description: "I have completed 51 learning projects.",
+      },
     ],
   },
-  { link: "/highlights", label: "Highlights" },
+  {
+    link: "/highlights",
+    label: "Highlights",
+  },
   { link: "/about", label: "About" },
 ];
 
 export default function Navbar() {
   const [current, setCurrent] = useState(null);
   const [opened, handlers] = useDisclosure(false);
+  const [drawerOpened, drawerHandlers] = useDisclosure(false);
   const { classes } = useStyles();
   const theme = useMantineTheme();
 
@@ -100,34 +126,31 @@ export default function Navbar() {
           gutter={1}
           opened={current === link.label ? true : false}
           control={
-            <a
-              href={link.link}
-              className={classes.link}
+            <span
               onMouseEnter={() => {
                 setCurrent(() => link.label);
                 handlers.open();
               }}
             >
-              <Center>
-                <span
-                  className={`${classes.linkLabel}${
-                    link.label === "Projects"
-                      ? ` ${styles.animateCharcter}`
-                      : ""
-                  }`}
+              <Link passHref href={link.link}>
+                <a
+                  className={classes.link}
+                  onClick={() => {
+                    setCurrent(() => "");
+                  }}
                 >
-                  {link.label}
-                </span>
-                <ChevronDown size={12} />
-              </Center>
-            </a>
+                  <Center>
+                    <span className={`${classes.linkLabel}`}>{link.label}</span>
+                    <ChevronDown size={12} />
+                  </Center>
+                </a>
+              </Link>
+            </span>
           }
         >
           <div
             onMouseLeave={() => {
               setCurrent(() => "");
-
-              handlers.close();
             }}
           >
             {menuItems}
@@ -142,8 +165,9 @@ export default function Navbar() {
           className={classes.link}
           onMouseEnter={() => {
             setCurrent(() => link.label);
-            handlers.open();
+            handlers.close();
           }}
+          onClick={handlers.close}
         >
           {link.label}
         </a>
@@ -154,20 +178,49 @@ export default function Navbar() {
   return (
     <Header height={56} className={classes.header}>
       <Container>
+        <Drawer
+          position="right"
+          opened={drawerOpened}
+          onClose={drawerHandlers.close}
+        >
+          <Center className="full-wh">
+            <div style={{ textAlign: "center" }}>
+              {links.map((link, idx) => {
+                return (
+                  <div
+                    key={`drawer-link-${idx}`}
+                    style={{ marginBottom: "1rem" }}
+                  >
+                    <Link passHref href={link.link}>
+                      <Button
+                        variant="light"
+                        fullWidth
+                        size="xl"
+                        component="a"
+                        onClick={drawerHandlers.close}
+                      >
+                        {link.label}
+                      </Button>
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </Center>
+        </Drawer>
         <div className={classes.inner}>
-          <Text
-            size="xl"
-            weight={700}
-            color={theme.colorScheme === "dark" ? "dark" : "white"}
-          >
-            DJ
-          </Text>
+          <Link passHref href="/">
+            <Text size="xl" weight={700} color="white">
+              DJ
+            </Text>
+          </Link>
           <Group spacing={5} className={classes.links}>
             {items}
+            <ToggleColorScheme />
           </Group>
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={drawerHandlers.open}
             className={classes.burger}
             size="sm"
             color="#fff"
