@@ -114,7 +114,7 @@ export default function ProjectCard({
       <Card.Section className={classes.section}>
         <Group position="apart">
           {link ? (
-            <a passHref href={link} target="__blank" rel="noopener noreferrer">
+            <a href={link} target="__blank" rel="noopener noreferrer">
               <Text size="lg" weight={500}>
                 {name} <ExternalLink style={{ marginBottom: "-4px" }} />
               </Text>

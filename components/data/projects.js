@@ -95,12 +95,12 @@ const projects = [
   {
     name: "Salzaa",
     description: [
-      "A startup. Working on making the APIs and a web app.",
+      "A startup. Working on making the APIs and updating the web app.",
       "RESTful APIs are built with Express and Mongoose. Also integrating Razorpay as a payment gateway.",
     ],
     with: [{ name: "Salzaa", url: "https://www.salzaa.com/" }],
     imageUrl: "/screenshots/salzaa.jpg",
-    link: "https://salzaa-seller.vercel.app/",
+    link: "https://salzaa.com/",
     category: "team",
     tags: [
       "full stack",
@@ -996,12 +996,12 @@ const projects = [
   {
     name: "Smart India Hackathon",
     description: [
-      "Auxilium (Help: Latin), a chatbot to help Ukranian refugees easily find latest news regarding evacuation.",
+      "Auxilium, a chatbot to help Ukranian refugees easily find latest news regarding evacuation.",
     ],
     with: false,
     imageUrl: false,
     link: "https://deej4y.github.io/Error.exe-website/",
-    category: "",
+    category: "team",
     tags: ["full stack", "fastapi", "mysql", "bootstrap"],
     major: false,
     upcoming: false,

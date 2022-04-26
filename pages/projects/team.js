@@ -8,7 +8,7 @@ export default function TeamProjectsPage() {
   return (
     <ContentWrapper>
       <Title order={1} mb="xl" align="center">
-        Freelance Projects
+        Team Projects
       </Title>
       <ProjectGrid projects={teamProjects} />
     </ContentWrapper>
