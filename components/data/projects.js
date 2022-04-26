@@ -79,7 +79,7 @@ const projects = [
     ],
     with: [{ name: "IoT Alliance", url: "https://www.iotalliance.in/" }],
     imageUrl: "/certificates/Resonate_certificate.png",
-    link: "/certificates/Resonate_certificate.png",
+    link: "/DEEJ4Y/certificates/Resonate_certificate.png",
     category: "team",
     tags: ["backend", "hackathon", "node", "express", "mongodb", "mongoose"],
     major: false,
@@ -182,7 +182,7 @@ const projects = [
       "Learnt express routing, request handling, static file serving and redirects.",
     ],
     with: false,
-    imageUrl: "false",
+    imageUrl: false,
     link: false,
     category: "learning",
     tags: ["full stack", "express"],
@@ -222,7 +222,7 @@ const projects = [
     category: "personal",
     tags: ["frontend", "canvas"],
     major: false,
-    upcoming: false,
+    upcoming: true,
     completed: true,
     repository: { platform: false, url: false },
     language: "javascript",
@@ -234,7 +234,7 @@ const projects = [
       "Uses Javascript classes for generating routes, controllers and database calls for CRUD operations for your mongoose models.",
     ],
     with: false,
-    imageUrl: "/public/screenshots/class-based-rest-api.jpg",
+    imageUrl: "/screenshots/class-based-rest-api.jpg",
     link: "https://deej4y.github.io/class-based-rest-api/",
     category: "personal",
     tags: ["backend", "api"],
@@ -291,7 +291,7 @@ const projects = [
       "One of my previous personal websites.",
     ],
     with: false,
-    imageUrl: "/public/screenshots/css-my-site.jpg",
+    imageUrl: "/screenshots/css-my-site.jpg",
     link: "https://deej4y.github.io/Stylized-Personal-Website/",
     category: "learning",
     tags: ["frontend", "css"],
@@ -390,7 +390,7 @@ const projects = [
       "Learnt how to use the EJS templating engine to render pages dynamically.",
     ],
     with: false,
-    imageUrl: "/public/screenshots/ejs-todo.jpg",
+    imageUrl: "/screenshots/ejs-todo.jpg",
     link: false,
     category: "learning",
     tags: ["full stack", "node", "express", "ejs", "mongoose"],
@@ -411,7 +411,7 @@ const projects = [
       "Also learnt how to deploy a package to npm and use JSdoc for automatic code documentation.",
     ],
     with: false,
-    imageUrl: "/public/screenshots/emfrest.jpg",
+    imageUrl: "/screenshots/emfrest.jpg",
     link: "https://www.npmjs.com/package/emfrest",
     category: "personal",
     tags: ["backend", "npm", "express", "mongoose"],
@@ -564,7 +564,7 @@ const projects = [
       "A great template to build your APIs without worrying about authentication.",
     ],
     with: false,
-    imageUrl: "/public/screenshots/jwt-auth-api-template.jpg",
+    imageUrl: "/screenshots/jwt-auth-api-template.jpg",
     link: "https://documenter.getpostman.com/view/13595623/TzXxkJWS#2b19f7fb-7d56-4c9e-bb42-4e4ced8040d9",
     category: "personal",
     tags: ["backend", "express", "jwt", "security"],
@@ -681,7 +681,7 @@ const projects = [
     link: "https://documenter.getpostman.com/view/13595623/TWDXnvzk",
     category: "personal",
     tags: ["backend", "node", "express", "mongoose"],
-    major: true,
+    major: false,
     upcoming: false,
     completed: true,
     repository: {
@@ -1012,6 +1012,23 @@ const projects = [
     },
     language: "python",
   },
+  {
+    name: "Kayal Maam's resume website",
+    description: ["A portfolio website."],
+    with: false,
+    imageUrl: "/screenshots/kayal-maam-resume-website.jpg",
+    link: "https://kayalvizhi-jayavel.vercel.app/",
+    category: "personal",
+    tags: ["frontend", "next"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/kayal_maam_resume_website",
+    },
+    language: "javascript",
+  },
   /** 
  {
     name: "",
@@ -1030,4 +1047,35 @@ const projects = [
  */
 ];
 
+projects.sort((a, b) => {
+  return a.name.localeCompare(b.name);
+});
+
+const getMajorProjects = () => {
+  return projects.filter((project) => {
+    return project.major === true;
+  });
+};
+
+const getNumberOfMajorProjects = () => {
+  return getMajorProjects().length;
+};
+
+const getProjectsByCategory = (category) => {
+  return projects.filter((project) => {
+    return project.category === category;
+  });
+};
+
+const getNumberOfProjectsByCategory = (category) => {
+  return getProjectsByCategory(category).length;
+};
+
 export default projects;
+
+export {
+  getMajorProjects,
+  getNumberOfMajorProjects,
+  getProjectsByCategory,
+  getNumberOfProjectsByCategory,
+};

@@ -16,6 +16,7 @@ import { Books, Briefcase, ChevronDown, User, Users } from "tabler-icons-react";
 import Link from "next/link";
 import { useState } from "react";
 import ToggleColorScheme from "../ToggleColorScheme/ToggleColorScheme";
+import { getNumberOfProjectsByCategory } from "../../data/projects";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -73,25 +74,33 @@ export const links = [
         link: "/projects/freelancing",
         label: "Freelance",
         Icon: Briefcase,
-        description: "I am currently working on one Freelance project.",
+        description: `I am currently working on ${getNumberOfProjectsByCategory(
+          "freelance"
+        )} Freelance project.`,
       },
       {
         link: "/projects/team",
         label: "Team",
         Icon: Users,
-        description: "I have worked on 9 team projects.",
+        description: `I have worked on ${getNumberOfProjectsByCategory(
+          "team"
+        )} team projects.`,
       },
       {
         link: "/projects/personal",
         label: "Personal",
         Icon: User,
-        description: "I have completed 9 personal projects.",
+        description: `I have completed ${getNumberOfProjectsByCategory(
+          "personal"
+        )} personal projects.`,
       },
       {
         link: "/projects/learning",
         label: "Learning",
         Icon: Books,
-        description: "I have completed 51 learning projects.",
+        description: `I have completed ${getNumberOfProjectsByCategory(
+          "learning"
+        )} learning projects.`,
       },
     ],
   },

@@ -5,6 +5,10 @@ import {
   GitCommit,
   UserCheck,
 } from "tabler-icons-react";
+import {
+  getNumberOfMajorProjects,
+  getNumberOfProjectsByCategory,
+} from "../../data/projects";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -62,6 +66,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const numberOfMajorProjects = getNumberOfMajorProjects();
+
 const statsData = [
   {
     title: "Commits",
@@ -72,9 +78,12 @@ const statsData = [
   },
   {
     title: "Major Projects",
-    stats: "11",
-    description:
-      "Developed 11 major projects, including 1 npm package, 3 team projects and 7 personal projects.",
+    stats: numberOfMajorProjects,
+    description: `Developed ${numberOfMajorProjects} major projects, including 1 npm package, ${getNumberOfProjectsByCategory(
+      "team"
+    )} team projects and ${getNumberOfProjectsByCategory(
+      "personal"
+    )} personal projects.`,
     Icon: DeviceDesktopAnalytics,
   },
   {
