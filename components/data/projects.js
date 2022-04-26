@@ -15,6 +15,8 @@
   },
  */
 
+import { assetPrefix } from "../../next.config";
+
 const projects = [
   {
     name: "Product Website",
@@ -78,8 +80,12 @@ const projects = [
       "Worked on the backend in building out RESTful APIs using Express and Mongoose.",
     ],
     with: [{ name: "IoT Alliance", url: "https://www.iotalliance.in/" }],
-    imageUrl: "/certificates/Resonate_certificate.png",
-    link: "/DEEJ4Y/certificates/Resonate_certificate.png",
+    imageUrl: "/certificates/Resonate_Certificate.png",
+    link: `${
+      assetPrefix
+        ? assetPrefix + "/certificates/Resonate_Certificate.png"
+        : "/certificates/Resonate_Certificate.png"
+    }`,
     category: "team",
     tags: ["backend", "hackathon", "node", "express", "mongodb", "mongoose"],
     major: false,
