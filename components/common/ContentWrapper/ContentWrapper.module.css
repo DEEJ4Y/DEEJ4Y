@@ -1,0 +1,22 @@
+.outer {
+  width: 100%;
+}
+
+.inner {
+  min-width: 280px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .inner {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .inner {
+    padding: 4rem;
+  }
+}
