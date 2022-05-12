@@ -73,7 +73,7 @@ const VibhuJain = {
 
 const YashGoel = {
   name: "Yash Goel",
-  url: "",
+  url: "https://www.linkedin.com/in/yash-goel-3064381a0",
 };
 
 /** Project format
