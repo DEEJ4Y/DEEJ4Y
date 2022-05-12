@@ -68,7 +68,7 @@ const SudhanshuBasuRoy = {
 
 const VibhuJain = {
   name: "Vibhu Jain",
-  url: "",
+  url: "https://github.com/VibhuJ01",
 };
 
 const YashGoel = {
