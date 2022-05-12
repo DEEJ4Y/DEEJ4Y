@@ -17,7 +17,7 @@ const DeeptadipMondal = {
 };
 
 const DevanshiKartik = {
-  name: "Devanshi Musalgaonkar",
+  name: "Devanshi Karthik",
   url: "https://www.linkedin.com/in/devanshi-karthik/",
 };
 
