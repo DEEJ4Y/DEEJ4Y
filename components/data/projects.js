@@ -1116,7 +1116,7 @@ const projects = [
     name: "Prem Mistry's Personal Website",
     description: [
       "A personal website project through Fiverr.",
-      "Designed by Kartik Tata, the project was made with Next.js and Bootstrap. Also configured a domain name as part of the gig. This was my first freelance project to be completed.",
+      "Designed by Kartik Tata, the project was made with Next.js and Bootstrap. Also configured a domain name as part of the gig. This was our first freelance project to be completed.",
     ],
     with: [KartikTata],
     imageUrl: "/screenshots/prem-mistrys-personal-website.jpg",
