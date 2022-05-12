@@ -5,6 +5,7 @@ import {
   FolderOff,
   ExternalLink,
   Tools,
+  Hash,
 } from "tabler-icons-react";
 import {
   Card,
@@ -14,10 +15,14 @@ import {
   Badge,
   Button,
   createStyles,
-  useMantineTheme,
   Tooltip,
+  ThemeIcon,
 } from "@mantine/core";
 import { assetPrefix } from "../../../next.config";
+import { toKebabCase } from "../../data/projects";
+import { useClipboard } from "@mantine/hooks";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -60,7 +65,9 @@ export default function ProjectCard({
   language,
 }) {
   const { classes } = useStyles();
-  const theme = useMantineTheme();
+  const clipboard = useClipboard({ timeout: 2500 });
+  const id = toKebabCase(name);
+  const router = useRouter();
 
   const features = tags.map((tag, idx) => {
     if (idx === 0) {
@@ -98,7 +105,7 @@ export default function ProjectCard({
   }
 
   return (
-    <Card withBorder radius="md" p="md" className={classes.card}>
+    <Card id={id} withBorder radius="md" p="md" className={classes.card}>
       {imageUrl ? (
         <Card.Section mb="md">
           <Image
@@ -125,20 +132,39 @@ export default function ProjectCard({
             </Text>
           )}
           <span>
+            <Link passHref href={`${router?.pathname}#${id}`}>
+              <Tooltip
+                position="left"
+                placement="center"
+                label={clipboard.copied ? "Copied" : "Copy"}
+                withArrow
+              >
+                <Hash
+                  color="grey"
+                  style={{ marginBottom: "-7px" }}
+                  onClick={() =>
+                    clipboard.copy(
+                      `${window.location.href.split("#")[0]}#${id}`
+                    )
+                  }
+                />
+              </Tooltip>
+            </Link>
             {upcoming ? (
               <Tooltip
                 position="left"
                 placement="center"
                 label="This is an upcoming project."
                 withArrow
+                ml="sm"
               >
-                <Tools style={{ marginBottom: "-4px" }} />
+                <Tools style={{ marginBottom: "-7px" }} />
               </Tooltip>
             ) : (
               ""
             )}
             {language ? (
-              <Badge size="sm" ml="xs" color="grape">
+              <Badge size="sm" ml="sm" color="grape">
                 {language}
               </Badge>
             ) : (
@@ -153,6 +179,28 @@ export default function ProjectCard({
             )}
           </span>
         </Group>
+
+        {withe?.length > 0 ? (
+          <div>
+            <Text size="sm" color="gray" style={{ display: "inline" }}>
+              With
+            </Text>
+            {withe.map(({ name, url }, idx) => (
+              <a
+                key={`with-${name}-${idx}`}
+                href={url}
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <Badge color="blue" size="md" ml="xs" className="clickable">
+                  {name}
+                </Badge>
+              </a>
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
         {description.map((line, idx) => {
           return (
             <Text key={`${name}-description-${idx}`} size="sm" mt="xs">

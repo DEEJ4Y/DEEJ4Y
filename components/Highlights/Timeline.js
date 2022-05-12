@@ -61,6 +61,11 @@ export const highlights = [
     time: "April 2022",
     description: "emfrest",
   },
+  {
+    title: "Completed my first Fiverr freelance project",
+    time: "May 2022",
+    description: "Prem Mistry's Portfolio website",
+  },
 ].reverse();
 
 export default function HighlightsTimeline() {

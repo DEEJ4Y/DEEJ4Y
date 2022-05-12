@@ -74,9 +74,9 @@ export const links = [
         link: "/projects/freelancing",
         label: "Freelance",
         Icon: Briefcase,
-        description: `I am currently working on ${getNumberOfProjectsByCategory(
+        description: `I have worked on ${getNumberOfProjectsByCategory(
           "freelance"
-        )} Freelance project.`,
+        )} Freelance projects.`,
       },
       {
         link: "/projects/team",

@@ -1,4 +1,82 @@
-/** 
+import { assetPrefix } from "../../next.config";
+
+// People I have worked with
+const AbhayDixit = {
+  name: "Abhay Dixit",
+  url: "https://www.linkedin.com/in/abhay-dixit-4a519a204/",
+};
+
+const AmishaJaiswal = {
+  name: "Amisha Jaiswal",
+  url: "https://www.linkedin.com/in/amisha-jaiswal-8532b1169/",
+};
+
+const DeeptadipMondal = {
+  name: "Deeptadip Mondal",
+  url: "https://www.linkedin.com/in/deeptadip-mondal-37410b1b8/",
+};
+
+const DevanshiKartik = {
+  name: "Devanshi Musalgaonkar",
+  url: "https://www.linkedin.com/in/devanshi-karthik/",
+};
+
+const DevanshiMusalgaonkar = {
+  name: "Devanshi Musalgaonkar",
+  url: "https://www.linkedin.com/in/devanshimusalgaonkar/",
+};
+
+const HarshGupta = {
+  name: "Harsh Gupta",
+  url: "https://www.linkedin.com/in/harsh-gupta-694b93147/",
+};
+
+const KartikBansal = {
+  name: "Kartik Bansal",
+  url: "https://www.linkedin.com/in/kartik-bansal77/",
+};
+
+const KartikTata = {
+  name: "Kartik Tata",
+  url: "https://www.linkedin.com/in/kartik-tata-47075b223/",
+};
+
+const MayukhMousamMishra = {
+  name: "Mayukh Mousam Mishra",
+  url: "https://www.linkedin.com/in/mayukh-mousam-mishra-227ab218b/",
+};
+
+const MohitSharma = {
+  name: "Mohit Sharma",
+  url: "https://www.linkedin.com/in/mohit-sharma-a792901b8/",
+};
+
+const RaghavSharma = {
+  name: "Raghav Sharma",
+  url: "https://www.linkedin.com/in/raghavsharma1299/",
+};
+
+const RajMukherjee = {
+  name: "Raj Mukherjee",
+  url: "https://www.linkedin.com/in/raj-mukherjee-28647a218/",
+};
+
+const SudhanshuBasuRoy = {
+  name: "Sudhanshu Basu Roy",
+  url: "https://www.linkedin.com/in/sudhanshu-basu-roy-b194881b1/",
+};
+
+const VibhuJain = {
+  name: "Vibhu Jain",
+  url: "",
+};
+
+const YashGoel = {
+  name: "Yash Goel",
+  url: "",
+};
+
+/** Project format
  {
     name: "",
     description: [""],
@@ -15,12 +93,11 @@
   },
  */
 
-import { assetPrefix } from "../../next.config";
-
+// List of my projects
 const projects = [
   {
     name: "Product Website",
-    with: false,
+    with: [],
     description: [
       "I am currently building a product website for an organization. I cannot disclose the name of the organization or the product as yet.",
       "The website is made with Next.js using static HTML export.",
@@ -37,7 +114,7 @@ const projects = [
   },
   {
     name: "Event Management App",
-    with: [{ name: "IoT Alliance", url: "https://www.iotalliance.in/" }],
+    with: [DevanshiKartik, DevanshiMusalgaonkar, HarshGupta],
     description: [
       "Worked on the building multiple RESTful APIs for the app using ExpressJS.",
       "APIs included authorization with Firebase, user defined custom roles, QR Code generation, Certificate Generation, Dynamic webpage generation from user data and basic CRUD operations.",
@@ -61,7 +138,7 @@ const projects = [
       "Worked on building out a series of webpages and integrating APIs to update content in a web application.",
       "The pages were made using HTML, CSS, Bootstrap and plain Javascript.",
     ],
-    with: [{ name: "IoT Alliance", url: "https://www.iotalliance.in/" }],
+    with: [SudhanshuBasuRoy, KartikBansal, DevanshiMusalgaonkar],
     imageUrl: false,
     link: false,
     category: "team",
@@ -79,7 +156,7 @@ const projects = [
       "Finished in the top 10 teams, in an all India hackathon with over 200 teams.",
       "Worked on the backend in building out RESTful APIs using Express and Mongoose.",
     ],
-    with: [{ name: "IoT Alliance", url: "https://www.iotalliance.in/" }],
+    with: [RaghavSharma, MayukhMousamMishra, AmishaJaiswal, HarshGupta],
     imageUrl: "/certificates/Resonate_Certificate.png",
     link: `${
       assetPrefix
@@ -104,7 +181,7 @@ const projects = [
       "A startup. Working on making the APIs and updating the web app.",
       "RESTful APIs are built with Express and Mongoose. Also integrating Razorpay as a payment gateway.",
     ],
-    with: [{ name: "Salzaa", url: "https://www.salzaa.com/" }],
+    with: [],
     imageUrl: "/screenshots/salzaa.jpg",
     link: "https://salzaa.com/",
     category: "team",
@@ -135,7 +212,7 @@ const projects = [
       "A project to learn and understand security and authentication.",
       "Learnt how to implement username and password jwt authentication and Google sign in with passport.js, database encryption and password hashing.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/secrets.jpg",
     link: false,
     category: "learning",
@@ -155,7 +232,7 @@ const projects = [
       "A project to learn to build responsive websites with Bootstrap.",
       "Learnt how to use Bootstrap components, grid system and utility classes.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/bootstrap-learning.png",
     link: false,
     category: "learning",
@@ -171,7 +248,7 @@ const projects = [
       "A responsive website made with Bootstrap.",
       "Used Bootstrap components, grid and utility classes.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/tindog.jpg",
     link: "https://deej4y.github.io/TinDog/",
     category: "learning",
@@ -187,7 +264,7 @@ const projects = [
       "A calculator project to learn to use Express.",
       "Learnt express routing, request handling, static file serving and redirects.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -205,7 +282,7 @@ const projects = [
     description: [
       "MDN's Canvas tutorial. Learnt the basics of rendering 2d graphics with a canvas.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -222,7 +299,7 @@ const projects = [
       "A Javascript class to render canvas certificates.",
       "Certificates can be generated with options to change text, signature, fonts and a background image for certificate designs.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/canvas-certificate-generator.png",
     link: false,
     category: "personal",
@@ -239,7 +316,7 @@ const projects = [
       "A mongoose-express project template to build REST APIs quickly.",
       "Uses Javascript classes for generating routes, controllers and database calls for CRUD operations for your mongoose models.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/class-based-rest-api.jpg",
     link: "https://deej4y.github.io/class-based-rest-api/",
     category: "personal",
@@ -259,7 +336,7 @@ const projects = [
       "Keep track of your oxygen levels.",
       "A simple React app that stores your SpO2 readings in localstorage.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/covid-spo2-log.jpg",
     link: "http://covid-spo2-log.herokuapp.com/",
     category: "personal",
@@ -279,7 +356,7 @@ const projects = [
       "A CSS challenge from The Complete 2020 Web Development Bootcamp.",
       "Gained a strong understanding of how the different CSS position types work.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -296,7 +373,7 @@ const projects = [
       "A CSS portfolio project from The Complete 2020 Web Development Bootcamp.",
       "One of my previous personal websites.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/css-my-site.jpg",
     link: "https://deej4y.github.io/Stylized-Personal-Website/",
     category: "learning",
@@ -318,7 +395,7 @@ const projects = [
       "My biggest weakness is my design skills, I don't have any. Developing a design given to me is no problem at all, but I cannot make a design on my own.",
       "Big thanks to all the UI libraries out there for making lives of developers easier, especially Bootstrap (react-bootstrap as well) and Mantine.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: "https://deej4y.github.io/DEEJ4Y/",
     category: "personal",
@@ -338,7 +415,7 @@ const projects = [
       "A learning project to make RESTful APIs in a modular way.",
       "Understood the usefulness of the model-view-controller-router model and implemented jwt authentication with argon2 hashing for passwords.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: "https://github.com/DEEJ4Y/DevCamper",
     category: "learning",
@@ -358,7 +435,7 @@ const projects = [
       "A project to learn how the DOM works.",
       "Learnt about events and manipulating the DOM.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -375,7 +452,7 @@ const projects = [
       "A challenge from The Complete 2020 Web Development Bootcamp.",
       "Developed a blog website using express and the ejs templating engine.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/ejs-blog.jpg",
     link: false,
     category: "learning",
@@ -395,7 +472,7 @@ const projects = [
       "A simple todo app using EJS.",
       "Learnt how to use the EJS templating engine to render pages dynamically.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/ejs-todo.jpg",
     link: false,
     category: "learning",
@@ -416,7 +493,7 @@ const projects = [
       "I took my learnings from Class Based REST API and created a completely functional version of it, allowing for more reusability.",
       "Also learnt how to deploy a package to npm and use JSdoc for automatic code documentation.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/emfrest.jpg",
     link: "https://www.npmjs.com/package/emfrest",
     category: "personal",
@@ -436,7 +513,7 @@ const projects = [
       "A simple project to test file uploading from the browser.",
       "Learnt about multipart forms.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -453,7 +530,7 @@ const projects = [
       "A web app to keep track of your funds and investments.",
       "My first react app with multi page routing and API integration using fetch. Backend was made with node, express and mongoose.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/portfolio-manager.jpg",
     link: false,
     category: "personal",
@@ -467,7 +544,7 @@ const projects = [
   {
     name: "Firebase Auth",
     description: ["A project to integrate firebase auth with a node.js app."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -481,7 +558,7 @@ const projects = [
   {
     name: "Fruits",
     description: ["A project to learn CRUD operations with mongoose."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -497,7 +574,7 @@ const projects = [
     description: [
       "A recursive react component to render accordions within each other.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -514,7 +591,7 @@ const projects = [
       "My first website.",
       "A personal website to understand different html elements and basic page layout using html tables.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/first-website.jpg",
     link: false,
     category: "learning",
@@ -531,7 +608,7 @@ const projects = [
   {
     name: "Drum Kit",
     description: ["A project to understand DOM events."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/drum-kit.jpg",
     link: "https://deej4y.github.io/drumKit/",
     category: "learning",
@@ -548,7 +625,7 @@ const projects = [
   {
     name: "Dice Game",
     description: ["A dice rolling game."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/dicee.jpg",
     link: "https://deej4y.github.io/theDiceGame/dicee.html",
     category: "learning",
@@ -569,7 +646,7 @@ const projects = [
       "JWT authentication is paired with argon2 hashing for passwords and a pre-made forgot password page.",
       "A great template to build your APIs without worrying about authentication.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/jwt-auth-api-template.jpg",
     link: "https://documenter.getpostman.com/view/13595623/TzXxkJWS#2b19f7fb-7d56-4c9e-bb42-4e4ced8040d9",
     category: "personal",
@@ -589,7 +666,7 @@ const projects = [
       "A one hour bootstrap website.",
       "Quickly built a portfolio website for a friend.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/mohit-portfolio.jpg",
     link: "https://deej4y.github.io/Mohit-Sharma/",
     category: "personal",
@@ -606,7 +683,7 @@ const projects = [
   {
     name: "Express Server",
     description: ["A project to start learning express."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -623,7 +700,7 @@ const projects = [
       "A project to use the Mailchimp API.",
       "Learnt how to create mailing lists to allow for sending batch mails.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/newsletter-signup.jpg",
     link: false,
     category: "learning",
@@ -637,7 +714,7 @@ const projects = [
   {
     name: "Nextjs Blog",
     description: ["The official Nextjs tutorial."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/nextjs-blog.jpg",
     link: false,
     category: "learning",
@@ -651,7 +728,7 @@ const projects = [
   {
     name: "React Context",
     description: ["A project to understand React Context."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -665,7 +742,7 @@ const projects = [
   {
     name: "Open Weather API",
     description: ["Learning to use 3rd party APIs."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -682,7 +759,7 @@ const projects = [
   {
     name: "Pet Store API",
     description: ["An API to manage a pet store."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: "https://documenter.getpostman.com/view/13595623/TWDXnvzk",
     category: "personal",
@@ -699,7 +776,7 @@ const projects = [
   {
     name: "QR Code Generator",
     description: ["Simple backend app to convert a string to a QR code."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -716,7 +793,7 @@ const projects = [
       "Easily find and add questions and answers.",
       "Keyword based search for questions and answers.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/question-bank.jpg",
     link: "https://question-bank-engg.herokuapp.com",
     category: "personal",
@@ -733,7 +810,7 @@ const projects = [
   {
     name: "React Keeper",
     description: ["A simple Google keep clone made in React."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/react-keeper.jpg",
     link: false,
     category: "learning",
@@ -754,7 +831,7 @@ const projects = [
       "A full stack application made with node, express, mongoose, mongodb, nextjs and react bootstrap.",
       "The project includes social media post template creation, website generation for followers to add text and a custom canvas solution to generate the post image from the created template.",
     ],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/social-auto-post.jpg",
     link: "https://socialautopost.herokuapp.com/",
     category: "personal",
@@ -771,7 +848,7 @@ const projects = [
   {
     name: "Simon Game",
     description: ["Digital recreation of the Simon game using jQuery."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/simon-game.jpg",
     link: "https://deej4y.github.io/theSimonGame/",
     category: "learning",
@@ -788,7 +865,7 @@ const projects = [
   {
     name: "Weekly Song Recommendation",
     description: ["A website to easily recommend songs to my friends."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/weekly-song-recommendation.jpg",
     link: "https://deej4y.github.io/WeeklySongRecommendation/",
     category: "personal",
@@ -805,7 +882,7 @@ const projects = [
   {
     name: "Wiki API",
     description: ["A Wikipedia style RESTful API."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -822,7 +899,7 @@ const projects = [
   {
     name: "Decrementer",
     description: ["An app to understand state in Flutter"],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -836,7 +913,7 @@ const projects = [
   {
     name: "Dicee Flutter",
     description: ["The dice rolling game, but in Flutter."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -853,7 +930,7 @@ const projects = [
   {
     name: "I am Rich",
     description: ["An app that displays fancy images."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -869,7 +946,7 @@ const projects = [
     description: [
       "Project to understand Flutter's layout builder and media queries.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -885,7 +962,7 @@ const projects = [
     description: [
       "A Flutter layout challenge from The Complete 2021 Flutter development bootcamp with dart.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -902,7 +979,7 @@ const projects = [
   {
     name: "Flutter Layout",
     description: ["Official Tutorial for building layouts in Flutter"],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -916,7 +993,7 @@ const projects = [
   {
     name: "Magic 8 Ball",
     description: ["A flutter app to emulate a Magic 8 ball."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -930,7 +1007,7 @@ const projects = [
   {
     name: "Mi Card",
     description: ["An app to showcase my contact details."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -946,7 +1023,7 @@ const projects = [
     description: [
       "Understanding Flutter page navigation with the v1 & v2 Widgets.",
     ],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -960,7 +1037,7 @@ const projects = [
   {
     name: "Provider Flutter",
     description: ["The official Flutter Provider tutorial."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -974,7 +1051,7 @@ const projects = [
   {
     name: "To Do",
     description: ["A stateful To Do App in Flutter"],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -988,7 +1065,7 @@ const projects = [
   {
     name: "Wake On Lan",
     description: ["An app to remotely wake up a device over the network."],
-    with: false,
+    with: [],
     imageUrl: false,
     link: false,
     category: "learning",
@@ -1004,8 +1081,8 @@ const projects = [
     description: [
       "Auxilium, a chatbot to help Ukranian refugees easily find latest news regarding evacuation.",
     ],
-    with: false,
-    imageUrl: false,
+    with: [VibhuJain, YashGoel, RajMukherjee, AbhayDixit],
+    imageUrl: "/screenshots/smart-india-hackathon.jpg",
     link: "https://deej4y.github.io/Error.exe-website/",
     category: "team",
     tags: ["full stack", "fastapi", "mysql", "bootstrap"],
@@ -1021,7 +1098,7 @@ const projects = [
   {
     name: "Kayal Maam's resume website",
     description: ["A portfolio website."],
-    with: false,
+    with: [],
     imageUrl: "/screenshots/kayal-maam-resume-website.jpg",
     link: "https://kayalvizhi-jayavel.vercel.app/",
     category: "personal",
@@ -1032,6 +1109,43 @@ const projects = [
     repository: {
       platform: "github",
       url: "https://github.com/DEEJ4Y/kayal_maam_resume_website",
+    },
+    language: "javascript",
+  },
+  {
+    name: "Prem Mistry's Personal Website",
+    description: [
+      "A personal website project through Fiverr.",
+      "Designed by Kartik Tata, the project was made with Next.js and Bootstrap. Also configured a domain name as part of the gig. This was my first freelance project to be completed.",
+    ],
+    with: [KartikTata],
+    imageUrl: "/screenshots/prem-mistrys-personal-website.jpg",
+    link: "https://lesgoo.in/",
+    category: "freelance",
+    tags: ["frontend", "next", "godaddy"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: { platform: "github", url: false },
+    language: "javascript",
+  },
+  {
+    name: "Data Structure Visualizer",
+    description: [
+      "Visually understand data structures.",
+      "A team project for our Software Engineering Project Management course in college.",
+    ],
+    with: [DeeptadipMondal, MohitSharma],
+    imageUrl: "/screenshots/data-structure-visualizer.jpg",
+    link: "https://deej4y.github.io/data-structure-visualizer/",
+    category: "team",
+    tags: ["frontend", "next", "mantine"],
+    major: false,
+    upcoming: true,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/data-structure-visualizer/",
     },
     language: "javascript",
   },
@@ -1077,6 +1191,10 @@ const getNumberOfProjectsByCategory = (category) => {
   return getProjectsByCategory(category).length;
 };
 
+const toKebabCase = (str) => {
+  return str.toLowerCase().split(" ").join("-");
+};
+
 export default projects;
 
 export {
@@ -1084,4 +1202,5 @@ export {
   getNumberOfMajorProjects,
   getProjectsByCategory,
   getNumberOfProjectsByCategory,
+  toKebabCase,
 };

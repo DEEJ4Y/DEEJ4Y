@@ -5,7 +5,7 @@ export default function ProjectGrid({ projects }) {
   return (
     <SimpleGrid cols={1} spacing="xl">
       {projects.map((project, idx) => {
-        project.withe = project.withe;
+        project.withe = project.with;
         return (
           <ProjectCard
             key={`project-card-${project.name}-${idx}`}
