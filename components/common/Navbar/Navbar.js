@@ -20,7 +20,7 @@ import { getNumberOfProjectsByCategory } from "../../data/projects";
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.colorScheme,
     borderBottom: 0,
   },
 
@@ -49,7 +49,7 @@ const useStyles = createStyles((theme) => ({
     padding: "8px 12px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
-    color: theme.white,
+    color: theme.colorScheme === "dark" ? "white" : "black",
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
@@ -219,7 +219,11 @@ export default function Navbar() {
         </Drawer>
         <div className={classes.inner}>
           <Link passHref href="/">
-            <Text size="xl" weight={700} color="white">
+            <Text
+              size="xl"
+              weight={700}
+              color={theme.colorScheme === "dark" ? "white" : "dark"}
+            >
               DJ
             </Text>
           </Link>

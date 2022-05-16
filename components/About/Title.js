@@ -15,6 +15,7 @@ const aboutData = [
           href="https://deej4y.github.io/WeeklySongRecommendation/"
           target="__blank"
           rel="noopener noreferrer"
+          className="highlight"
         >
           Check out some of my favorite songs here.
         </a>
