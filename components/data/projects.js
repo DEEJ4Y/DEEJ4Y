@@ -26,6 +26,11 @@ const DevanshiMusalgaonkar = {
   url: "https://www.linkedin.com/in/devanshimusalgaonkar/",
 };
 
+const DhruvPandoh = {
+  name: "Dhruv Pandoh",
+  url: "https://www.linkedin.com/in/dhruv-pandoh-52a39420b/",
+};
+
 const HarshGupta = {
   name: "Harsh Gupta",
   url: "https://www.linkedin.com/in/harsh-gupta-694b93147/",
@@ -39,6 +44,11 @@ const KartikBansal = {
 const KartikTata = {
   name: "Kartik Tata",
   url: "https://www.linkedin.com/in/kartik-tata-47075b223/",
+};
+
+const KussagraPathak = {
+  name: "Kussagra Pathak",
+  url: "https://www.linkedin.com/in/kush11251/",
 };
 
 const MayukhMousamMishra = {
@@ -181,7 +191,7 @@ const projects = [
       "A startup. Working on making the APIs and updating the web app.",
       "RESTful APIs are built with Express and Mongoose. Also integrating Razorpay as a payment gateway.",
     ],
-    with: [],
+    with: [DhruvPandoh, KussagraPathak],
     imageUrl: "/screenshots/salzaa.jpg",
     link: "https://salzaa.com/",
     category: "team",
@@ -194,7 +204,9 @@ const projects = [
       "mongodb",
       "react",
       "next",
-      "react bootstrap",
+      "mantine",
+      "mocha",
+      "chai",
     ],
     major: true,
     upcoming: true,
