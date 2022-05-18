@@ -42,6 +42,17 @@ a:hover,
   color: #1098ad;
 }
 
+.mantine-Drawer-closeButton {
+  width: 48px !important;
+  height: 48px !important;
+  margin: 8px 8px 0 0;
+}
+
+.mantine-Drawer-closeButton svg {
+  width: 38px !important;
+  height: 38px !important;
+}
+
 @keyframes textclip {
   to {
     background-position: 200% center;

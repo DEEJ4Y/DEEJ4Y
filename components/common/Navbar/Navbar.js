@@ -236,7 +236,7 @@ export default function Navbar() {
             onClick={drawerHandlers.open}
             className={classes.burger}
             size="sm"
-            color="#fff"
+            color={theme.colorScheme === "dark" ? "#eeeeee" : "#131313"}
           />
         </div>
       </Container>
