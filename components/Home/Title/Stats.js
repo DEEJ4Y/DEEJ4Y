@@ -79,7 +79,7 @@ const statsData = [
   {
     title: "Major Projects",
     stats: numberOfMajorProjects,
-    description: `Developed ${numberOfMajorProjects} major projects, including 1 npm package, ${getNumberOfProjectsByCategory(
+    description: `Developed ${numberOfMajorProjects} major projects, including 1 npm package; ${getNumberOfProjectsByCategory(
       "team"
     )} team projects and ${getNumberOfProjectsByCategory(
       "personal"

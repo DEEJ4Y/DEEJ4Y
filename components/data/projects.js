@@ -116,7 +116,7 @@ const projects = [
     link: false,
     category: "freelance",
     tags: ["frontend", "next"],
-    major: true,
+    major: false,
     upcoming: true,
     completed: false,
     repository: { platform: "bitbucket", url: false },
@@ -193,7 +193,7 @@ const projects = [
     ],
     with: [DhruvPandoh, KussagraPathak],
     imageUrl: "/screenshots/salzaa.jpg",
-    link: "https://salzaa.com/",
+    link: "https://salzaa-seller.vercel.app/",
     category: "team",
     tags: [
       "full stack",
@@ -208,7 +208,7 @@ const projects = [
       "mocha",
       "chai",
     ],
-    major: true,
+    major: false,
     upcoming: true,
     completed: false,
     notCompletedReason: false,
@@ -536,23 +536,23 @@ const projects = [
     repository: { platform: false, url: false },
     language: "javascript",
   },
-  {
-    name: "Financial Portfolio",
-    description: [
-      "A web app to keep track of your funds and investments.",
-      "My first react app with multi page routing and API integration using fetch. Backend was made with node, express and mongoose.",
-    ],
-    with: [],
-    imageUrl: "/screenshots/portfolio-manager.jpg",
-    link: false,
-    category: "personal",
-    tags: ["full stack", "react", "node", "express", "mongoose"],
-    major: false,
-    upcoming: false,
-    completed: true,
-    repository: { platform: false, url: false },
-    language: "javascript",
-  },
+  // {
+  //   name: "Financial Portfolio",
+  //   description: [
+  //     "A web app to keep track of your funds and investments.",
+  //     "My first react app with multi page routing and API integration using fetch. Backend was made with node, express and mongoose.",
+  //   ],
+  //   with: [],
+  //   imageUrl: "/screenshots/portfolio-manager.jpg",
+  //   link: false,
+  //   category: "personal",
+  //   tags: ["full stack", "react", "node", "express", "mongoose"],
+  //   major: false,
+  //   upcoming: false,
+  //   completed: true,
+  //   repository: { platform: false, url: false },
+  //   language: "javascript",
+  // },
   {
     name: "Firebase Auth",
     description: ["A project to integrate firebase auth with a node.js app."],
@@ -1181,6 +1181,12 @@ const projects = [
 
 projects.sort((a, b) => {
   return a.name.localeCompare(b.name);
+});
+
+projects.sort((a, b) => {
+  if (a.repository.url === false) return 1;
+  if (b.repository.url === false) return -1;
+  return 0;
 });
 
 const getMajorProjects = () => {

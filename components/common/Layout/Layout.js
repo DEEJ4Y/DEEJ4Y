@@ -7,43 +7,39 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
+        {/* HTML Meta Tags */}
         <title>David Joseph</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="robots" content="all" />
         <meta
           name="description"
-          content="Hi, I'm David. A Full Stack Developer."
+          content="Hi, I'm David. A Full Stack Developer. Have a look at some of my projects and find out more about me."
         />
+
+        {/* Facebook Meta Tags */}
+        <meta property="og:url" content="https://davidjoseph.me/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="David Joseph" />
         <meta
-          name="og:title"
-          property="og:title"
-          content="David Joseph's Personal Website"
-        />
-        <meta
-          name="og:description"
           property="og:description"
           content="Hi, I'm David. A Full Stack Developer. Have a look at some of my projects and find out more about me."
         />
         <meta
-          name="og:url"
-          property="og:url"
-          content="https://deej4y.github.io/DEEJ4Y"
-        />
-        <meta
-          name="og:site_name"
-          property="og:site_name"
-          content="deej4y.github.io"
-        />
-        <meta
-          name="og:image"
           property="og:image"
-          content="https://deej4y.github.io/DEEJ4Y/background-image.webp"
+          content="https://davidjoseph.me/background-image.webp"
         />
-        <link
-          rel="icon"
-          type="image/x-icon"
-          href={assetPrefix ? assetPrefix + "/favicon.png" : "/favicon.png"}
-        ></link>
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="davidjoseph.me" />
+        <meta property="twitter:url" content="https://davidjoseph.me/" />
+        <meta name="twitter:title" content="David Joseph" />
+        <meta
+          name="twitter:description"
+          content="Hi, I'm David. A Full Stack Developer. Have a look at some of my projects and find out more about me."
+        />
+        <meta
+          name="twitter:image"
+          content="https://davidjoseph.me/background-image.webp"
+        />
       </Head>
       <Navbar />
       <div>{children || ""}</div>
