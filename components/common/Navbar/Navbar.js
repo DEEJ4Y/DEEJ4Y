@@ -219,7 +219,7 @@ export default function Navbar() {
           </Center>
         </Drawer>
         <div className={classes.inner}>
-          <Link passHref href="/">
+          <Link passHref href="https://davidjoseph.me/">
             <Text
               size="xl"
               weight={700}

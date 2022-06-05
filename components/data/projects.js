@@ -1161,6 +1161,26 @@ const projects = [
     },
     language: "javascript",
   },
+  {
+    name: "Tree search",
+    description: [
+      "Fast text pattern search.",
+      "Visualization of a fast text pattern search using trees.",
+    ],
+    with: [],
+    imageUrl: "/screenshots/tree-search.jpg",
+    link: "https://deej4y.github.io/dsa-tree-search/",
+    category: "personal",
+    tags: ["frontend", "next", "tree"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/dsa-tree-search",
+    },
+    language: "dart",
+  },
   /** 
  {
     name: "",
