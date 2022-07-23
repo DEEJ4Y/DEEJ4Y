@@ -209,7 +209,7 @@ const projects = [
       "chai",
     ],
     major: false,
-    upcoming: true,
+    upcoming: false,
     completed: false,
     notCompletedReason: false,
     repository: {
