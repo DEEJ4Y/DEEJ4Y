@@ -77,7 +77,18 @@ export default function AboutTitle() {
       <div style={{ textAlign: "start", margin: "2rem 0" }}>
         <Paper p="md" withBorder>
           <Text mb="md">
-            I am currently the CTO at a{" "}
+            I am currently a Technical associate at{" "}
+            <a
+              className="highlight"
+              target="__blank"
+              rel="noopener noreferrer"
+              href="https://msclubsrm.in/"
+            >
+              Microsoft Learn Student Ambassadors SRM.
+            </a>
+          </Text>
+          <Text mb="md">
+            I was the CTO at{" "}
             <a
               className="highlight"
               target="__blank"
@@ -87,17 +98,6 @@ export default function AboutTitle() {
               Salzaa
             </a>
             , a startup.
-          </Text>
-          <Text mb="md">
-            I am also a Technical associate at{" "}
-            <a
-              className="highlight"
-              target="__blank"
-              rel="noopener noreferrer"
-              href="https://msclubsrm.in/"
-            >
-              Microsoft Learn Student Ambassadors SRM.
-            </a>
           </Text>
           <Text>
             See my{" "}
