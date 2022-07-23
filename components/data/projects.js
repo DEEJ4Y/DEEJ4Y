@@ -188,8 +188,8 @@ const projects = [
   {
     name: "Salzaa",
     description: [
-      "A startup. Working on making the APIs and updating the web app.",
-      "RESTful APIs are built with Express and Mongoose. Also integrating Razorpay as a payment gateway.",
+      "A startup. Worked on making the APIs and rebuilding the web app.",
+      "RESTful APIs are built with Express and Mongoose. Testing with Mocha and Chai.",
     ],
     with: [DhruvPandoh, KussagraPathak],
     imageUrl: "/screenshots/salzaa.jpg",
