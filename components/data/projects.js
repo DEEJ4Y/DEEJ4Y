@@ -1184,6 +1184,26 @@ const projects = [
     },
     language: "dart",
   },
+  {
+    name: "Snake Game",
+    description: [
+      "A snake game using Tkinter.",
+      "This was my attempt at developing the snake game. I used my knowledge of Tkinter and OOP to make this game within a few hours.",
+    ],
+    with: [],
+    imageUrl: "/screenshots/snake-game.gif",
+    link: "/screenshots/snake-game.gif",
+    category: "personal",
+    tags: ["game", "tkinter"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/tkinter-snake-game",
+    },
+    language: "python",
+  },
   /** 
  {
     name: "",
