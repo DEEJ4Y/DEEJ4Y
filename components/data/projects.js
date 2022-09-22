@@ -512,7 +512,7 @@ const projects = [
     imageUrl: "/screenshots/emfrest.jpg",
     link: "https://www.npmjs.com/package/emfrest",
     category: "personal",
-    tags: ["backend", "npm", "express", "mongoose"],
+    tags: ["backend", "npm", "express", "mongoose", "jsdoc"],
     major: true,
     upcoming: false,
     completed: true,
@@ -520,7 +520,7 @@ const projects = [
       platform: "github",
       url: "https://github.com/DEEJ4Y/emfrest",
     },
-    language: "javascript",
+    language: "typescript",
   },
   {
     name: "File Upload",
