@@ -75,10 +75,16 @@ export const highlights = [
     link: "/projects/freelancing#prem-mistry's-personal-website",
   },
   {
-    title: "Created another open source project",
+    title: "Another open source project",
     time: "June 2022",
     description: "Simple Certificate Generator",
     link: "/projects/personal#simple-certificate-generator",
+  },
+  {
+    title: "First Game Project",
+    time: "July 2022",
+    description: "Tkinter Snake Game",
+    link: "/projects/personal#snake-game",
   },
 ].reverse();
 

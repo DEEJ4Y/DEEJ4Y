@@ -1,4 +1,4 @@
-import { Title, Text, Timeline, TimelineItem } from "@mantine/core";
+import { Title } from "@mantine/core";
 import ContentWrapper from "../components/common/ContentWrapper/ContentWrapper";
 import HighlightsTimeline from "../components/Highlights/Timeline";
 
@@ -9,7 +9,6 @@ export default function HighlightsPage() {
         <Title className="animate-character" order={1}>
           Highlights
         </Title>
-        <Text>Have a look at my important milestones.</Text>
       </div>
       <HighlightsTimeline />
     </ContentWrapper>
