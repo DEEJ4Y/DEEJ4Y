@@ -12,11 +12,21 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Books, Briefcase, ChevronDown, User, Users } from "tabler-icons-react";
+import {
+  Books,
+  Briefcase,
+  ChevronDown,
+  Trophy,
+  User,
+  Users,
+} from "tabler-icons-react";
 import Link from "next/link";
 import { useState } from "react";
 import ToggleColorScheme from "../ToggleColorScheme/ToggleColorScheme";
-import { getNumberOfProjectsByCategory } from "../../data/projects";
+import {
+  getNumberOfHackathonProjects,
+  getNumberOfProjectsByCategory,
+} from "../../data/projects";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -80,6 +90,14 @@ export const links = [
         )} Freelance projects.`,
       },
       {
+        link: "/projects/personal",
+        label: "Personal",
+        Icon: User,
+        description: `I have completed ${getNumberOfProjectsByCategory(
+          "personal"
+        )} personal projects.`,
+      },
+      {
         link: "/projects/team",
         label: "Team",
         Icon: Users,
@@ -88,12 +106,10 @@ export const links = [
         )} team projects.`,
       },
       {
-        link: "/projects/personal",
-        label: "Personal",
-        Icon: User,
-        description: `I have completed ${getNumberOfProjectsByCategory(
-          "personal"
-        )} personal projects.`,
+        link: "/projects/hackathons",
+        label: "Hackathons",
+        Icon: Trophy,
+        description: `I have participated in ${getNumberOfHackathonProjects()} hackathons.`,
       },
       {
         link: "/projects/learning",
@@ -105,6 +121,7 @@ export const links = [
       },
     ],
   },
+  { link: "/certificates-and-achievements", label: "Certificates" },
   {
     link: "/highlights",
     label: "Highlights",

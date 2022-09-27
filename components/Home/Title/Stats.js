@@ -88,9 +88,8 @@ const statsData = [
   },
   {
     title: "Years Experience",
-    stats: "1.5+",
-    description:
-      "Developing websites and web apps for more than a year and a half.",
+    stats: "2+",
+    description: "Developing websites and web apps for more two years.",
     Icon: UserCheck,
   },
 ];

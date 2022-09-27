@@ -174,7 +174,8 @@ const projects = [
         : "/certificates/Resonate_Certificate.png"
     }`,
     category: "team",
-    tags: ["backend", "hackathon", "node", "express", "mongodb", "mongoose"],
+    tags: ["backend", "node", "express", "mongodb", "mongoose"],
+    isHackathon: true,
     major: false,
     upcoming: false,
     completed: true,
@@ -539,23 +540,6 @@ const projects = [
     repository: { platform: false, url: false },
     language: "javascript",
   },
-  // {
-  //   name: "Financial Portfolio",
-  //   description: [
-  //     "A web app to keep track of your funds and investments.",
-  //     "My first react app with multi page routing and API integration using fetch. Backend was made with node, express and mongoose.",
-  //   ],
-  //   with: [],
-  //   imageUrl: "/screenshots/portfolio-manager.jpg",
-  //   link: false,
-  //   category: "personal",
-  //   tags: ["full stack", "react", "node", "express", "mongoose"],
-  //   major: false,
-  //   upcoming: false,
-  //   completed: true,
-  //   repository: { platform: false, url: false },
-  //   language: "javascript",
-  // },
   {
     name: "Firebase Auth",
     description: ["A project to integrate firebase auth with a node.js app."],
@@ -1101,6 +1085,7 @@ const projects = [
     link: "https://deej4y.github.io/Error.exe-website/",
     category: "team",
     tags: ["full stack", "fastapi", "mysql", "bootstrap"],
+    isHackathon: true,
     major: false,
     upcoming: false,
     completed: true,
@@ -1204,6 +1189,29 @@ const projects = [
     },
     language: "python",
   },
+  {
+    name: "WebFab 2022",
+    description: [
+      "A club website.",
+      "This project was my submission for the WebFab 2022 Hackathon, a Web Development challenge conducted by NWC Association SRMIST and IoT Alliance.",
+    ],
+    with: [],
+    imageUrl: assetPrefix
+      ? assetPrefix + "/screenshots/webfab-2022.png"
+      : "/screenshots/webfab-2022.png",
+    link: "https://webfab-2022-frontend.vercel.app/",
+    category: "personal",
+    tags: ["Frontend", "Next.js", "Mantine"],
+    isHackathon: true,
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/webfab-2022",
+    },
+    language: "javascript",
+  },
   /** 
  {
     name: "",
@@ -1242,6 +1250,14 @@ const getNumberOfMajorProjects = () => {
   return getMajorProjects().length;
 };
 
+const getHackathonProjects = () => {
+  return projects.filter((project) => project.isHackathon);
+};
+
+const getNumberOfHackathonProjects = () => {
+  return getHackathonProjects().length;
+};
+
 const getProjectsByCategory = (category) => {
   return projects.filter((project) => {
     return project.category === category;
@@ -1261,6 +1277,8 @@ export default projects;
 export {
   getMajorProjects,
   getNumberOfMajorProjects,
+  getHackathonProjects,
+  getNumberOfHackathonProjects,
   getProjectsByCategory,
   getNumberOfProjectsByCategory,
   toKebabCase,

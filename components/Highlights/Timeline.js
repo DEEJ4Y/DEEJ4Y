@@ -1,4 +1,6 @@
-import { Text, Timeline, TimelineItem } from "@mantine/core";
+import { ActionIcon, Text, Timeline, TimelineItem } from "@mantine/core";
+import Link from "next/link";
+import { ExternalLink } from "tabler-icons-react";
 
 export const highlights = [
   {
@@ -20,9 +22,10 @@ export const highlights = [
       "Built my first full stack application with API calls and authentication.",
   },
   {
-    title: "Started my first major project",
+    title: "Started my first big team project",
     time: "March 2021",
     description: "Event Management",
+    link: "/projects/team#event-management-app",
   },
   {
     title: "First promotion",
@@ -41,6 +44,7 @@ export const highlights = [
     title: "Completed a major project",
     time: "December 2021",
     description: "socialautopost",
+    link: "/projects/personal#social-auto-post",
   },
   {
     title: "Started my first Freelance project",
@@ -50,21 +54,31 @@ export const highlights = [
     title: "Completed a major project",
     time: "February 2022",
     description: "Question Bank",
+    link: "/projects/personal#question-bank",
   },
   {
     title: "Joined a startup",
     time: "February 2022",
     description: "Salzaa",
+    link: "/projects/team#salzaa",
   },
   {
     title: "Published my first npm package",
     time: "April 2022",
     description: "emfrest",
+    link: "/projects/personal#emfrest",
   },
   {
     title: "Completed my first Fiverr freelance project",
     time: "May 2022",
     description: "Prem Mistry's Portfolio website",
+    link: "/projects/freelancing#prem-mistry's-personal-website",
+  },
+  {
+    title: "Created another open source project",
+    time: "June 2022",
+    description: "Simple Certificate Generator",
+    link: "/projects/personal#simple-certificate-generator",
   },
 ].reverse();
 
@@ -77,7 +91,26 @@ export default function HighlightsTimeline() {
           title={highlight.title}
           bulletSize={12}
         >
-          {highlight.description ? (
+          {highlight.link ? (
+            <Link passHref href={highlight.link}>
+              {highlight.description ? (
+                <Text className="clickable" color="dimmed" size="sm">
+                  {highlight.description}
+                  <ActionIcon
+                    style={{
+                      display: "inline",
+                      position: "relative",
+                      top: "2px",
+                    }}
+                  >
+                    <ExternalLink size={16} />
+                  </ActionIcon>
+                </Text>
+              ) : (
+                ""
+              )}
+            </Link>
+          ) : highlight.description ? (
             <Text color="dimmed" size="sm">
               {highlight.description}
             </Text>

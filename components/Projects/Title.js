@@ -3,11 +3,11 @@ import {
   Text,
   Title,
   Container,
-  SimpleGrid,
   useMantineTheme,
   createStyles,
   Paper,
   Button,
+  Grid,
 } from "@mantine/core";
 import { links } from "../common/Navbar/Navbar";
 import Link from "next/link";
@@ -59,7 +59,9 @@ const useStyles = createStyles((theme) => ({
 export default function ProjectsTitle({}) {
   const { classes } = useStyles();
   const features = data.map((feature, index) => (
-    <Feature {...feature} key={index} />
+    <Grid.Col key={index} md={6} sm={12}>
+      <Feature {...feature} />
+    </Grid.Col>
   ));
 
   return (
@@ -70,17 +72,9 @@ export default function ProjectsTitle({}) {
         The projects are arranged in different categories below.
       </Text>
 
-      <SimpleGrid
-        mt={60}
-        cols={2}
-        spacing="md"
-        breakpoints={[
-          { maxWidth: 980, cols: 2 },
-          { maxWidth: 755, cols: 1 },
-        ]}
-      >
+      <Grid mt={60} spacing="md" justify="center">
         {features}
-      </SimpleGrid>
+      </Grid>
     </Container>
   );
 }
