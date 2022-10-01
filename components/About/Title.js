@@ -42,7 +42,7 @@ export default function AboutTitle() {
       </Title>
       <Paper p="md" withBorder>
         <Text mb="md">
-          I am pursuing my second year of Computer Science and Engineering at{" "}
+          I am pursuing my third year of Computer Science and Engineering at{" "}
           <a
             className="highlight"
             target="__blank"
