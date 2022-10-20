@@ -46,9 +46,7 @@ export default function SkillsCarousel() {
           }}
         >
           <Text align="center">
-            <Badge color={colors[(idx % colors.length) - 1]} variant="outline">
-              {skill}
-            </Badge>
+            <Badge color={colors[(idx % colors.length) - 1]}>{skill}</Badge>
           </Text>
         </Carousel.Slide>
       ))}
