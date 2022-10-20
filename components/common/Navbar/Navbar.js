@@ -27,6 +27,7 @@ import {
   getNumberOfHackathonProjects,
   getNumberOfProjectsByCategory,
 } from "../../data/projects";
+import SkillsCarousel from "../../Home/Title/Skills";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -244,15 +245,18 @@ export default function Navbar() {
           </Center>
         </Drawer>
         <div className={classes.inner}>
-          <Link passHref href="https://davidjoseph.me/">
-            <Text
-              size="xl"
-              weight={700}
-              color={theme.colorScheme === "dark" ? "white" : "dark"}
-            >
-              DJ
-            </Text>
-          </Link>
+          <Group spacing={0}>
+            <Link passHref href="https://davidjoseph.me/">
+              <Text
+                size="xl"
+                weight={700}
+                color={theme.colorScheme === "dark" ? "white" : "dark"}
+              >
+                DJ
+              </Text>
+            </Link>
+            <SkillsCarousel />
+          </Group>
           <Group spacing={5} className={classes.links}>
             {items}
             <ToggleColorScheme />

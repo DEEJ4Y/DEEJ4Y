@@ -1296,9 +1296,22 @@ const toKebabCase = (str) => {
   return str.toLowerCase().split(" ").join("-");
 };
 
+const getAllSkills = () => {
+  const skills = {};
+
+  projects.forEach(({ tags }) => {
+    tags.forEach((tag) => {
+      skills[tag.toUpperCase()] = true;
+    });
+  });
+
+  return Object.keys(skills);
+};
+
 export default projects;
 
 export {
+  getAllSkills,
   getMajorProjects,
   getNumberOfMajorProjects,
   getHackathonProjects,

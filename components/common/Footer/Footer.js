@@ -10,7 +10,6 @@ import {
 } from "@mantine/core";
 import { BrandGithub, BrandLinkedin, Code, Mail } from "tabler-icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import ContactForm from "../../Home/Contact/Form";
 import ContactSection from "../../Home/Contact/Contact";
 
 const useStyles = createStyles((theme) => ({
