@@ -82,7 +82,7 @@ export default function Footer() {
       </Modal>
       <div className={classes.footer}>
         <Container className={classes.inner}>
-          <Group spacing={0} className={classes.links} noWrap>
+          <Group spacing={0} className={classes.links} align="center">
             <FooterLink
               link={"https://github.com/DEEJ4Y"}
               label="Github"
