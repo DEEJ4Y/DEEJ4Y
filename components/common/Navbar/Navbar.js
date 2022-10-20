@@ -138,9 +138,11 @@ export default function Navbar() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Link key={item.link} passHref href={item.link}>
-        <Menu.Item as="a">{item.label}</Menu.Item>
-      </Link>
+      <Menu.Item key={item.link}>
+        <Link passHref href={item.link}>
+          <a>{item.label}</a>
+        </Link>
+      </Menu.Item>
     ));
 
     if (menuItems) {
@@ -152,7 +154,8 @@ export default function Navbar() {
           placement="end"
           gutter={1}
           opened={current === link.label ? true : false}
-          control={
+        >
+          <Menu.Target>
             <span
               onMouseEnter={() => {
                 setCurrent(() => link.label);
@@ -173,15 +176,17 @@ export default function Navbar() {
                 </a>
               </Link>
             </span>
-          }
-        >
-          <div
-            onMouseLeave={() => {
-              setCurrent(() => "");
-            }}
-          >
-            {menuItems}
-          </div>
+          </Menu.Target>
+          <Menu.Dropdown>
+            <div
+              onMouseLeave={() => {
+                setCurrent(() => "");
+                handlers.close();
+              }}
+            >
+              {menuItems}
+            </div>
+          </Menu.Dropdown>
         </Menu>
       );
     }
@@ -194,7 +199,10 @@ export default function Navbar() {
             setCurrent(() => link.label);
             handlers.close();
           }}
-          onClick={handlers.close}
+          onClick={() => {
+            setCurrent(() => "");
+            handlers.close();
+          }}
         >
           {link.label}
         </a>

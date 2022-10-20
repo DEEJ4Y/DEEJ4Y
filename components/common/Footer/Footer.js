@@ -3,10 +3,15 @@ import {
   createStyles,
   Container,
   Group,
-  ActionIcon,
   Text,
+  Button,
+  ThemeIcon,
+  Modal,
 } from "@mantine/core";
-import { BrandGithub, BrandLinkedin } from "tabler-icons-react";
+import { BrandGithub, BrandLinkedin, Code, Mail } from "tabler-icons-react";
+import { useDisclosure } from "@mantine/hooks";
+import ContactForm from "../../Home/Contact/Form";
+import ContactSection from "../../Home/Contact/Contact";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -34,33 +39,73 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+export const FooterLink = ({ link, label, Icon }) => (
+  <a href={link} rel="noopener noreferrer" target="_blank">
+    <Button variant="subtle">
+      <Text color="dimmed" size="xs">
+        {label}
+      </Text>
+
+      <ThemeIcon variant="subtle">
+        <Icon size={18} />
+      </ThemeIcon>
+    </Button>
+  </a>
+);
+
+export const FooterButton = ({ label, onClick, Icon }) => (
+  <span>
+    <Button
+      variant="subtle"
+      onClick={onClick ? onClick : () => {}}
+      color="dimmed"
+    >
+      <Text color="dimmed" size="xs">
+        {label}
+      </Text>
+
+      <ThemeIcon variant="subtle">
+        <Icon size={18} />
+      </ThemeIcon>
+    </Button>
+  </span>
+);
+
 export default function Footer() {
   const { classes } = useStyles();
+  const [opened, handlers] = useDisclosure();
 
   return (
-    <div className={classes.footer}>
-      <Container className={classes.inner}>
-        <Group spacing={0} className={classes.links} noWrap>
-          <a
-            href="https://github.com/DEEJ4Y"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <ActionIcon size="lg">
-              <BrandGithub size={18} />
-            </ActionIcon>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/david-joseph-75a7b71b5/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <ActionIcon size="lg">
-              <BrandLinkedin size={18} />
-            </ActionIcon>
-          </a>
-        </Group>
-      </Container>
+    <div>
+      <Modal opened={opened} onClose={handlers.close} title="Say Hi!">
+        <ContactSection />
+      </Modal>
+      <div className={classes.footer}>
+        <Container className={classes.inner}>
+          <Group spacing={0} className={classes.links} noWrap>
+            <FooterLink
+              link={"https://github.com/DEEJ4Y"}
+              label="Github"
+              Icon={BrandGithub}
+            />
+            <FooterLink
+              link={"https://www.linkedin.com/in/david-joseph-75a7b71b5/"}
+              label="Linkedin"
+              Icon={BrandLinkedin}
+            />
+            <FooterLink
+              link={"https://www.hackerrank.com/DEEJ4Y"}
+              label="HackerRank"
+              Icon={Code}
+            />
+            <FooterButton
+              label="Contact Me"
+              Icon={Mail}
+              onClick={handlers.toggle}
+            />
+          </Group>
+        </Container>
+      </div>
     </div>
   );
 }

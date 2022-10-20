@@ -22,7 +22,14 @@ function MyApp({ Component, pageProps }) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{ primaryColor: "cyan", colorScheme: colorScheme }}
+        theme={{
+          primaryColor: "cyan",
+          colorScheme: colorScheme,
+          defaultGradient: {
+            from: "teal",
+            to: "cyan",
+          },
+        }}
       >
         <Layout>
           <Component {...pageProps} />

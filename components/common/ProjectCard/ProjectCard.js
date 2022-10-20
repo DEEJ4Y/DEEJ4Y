@@ -139,15 +139,17 @@ export default function ProjectCard({
                 label={clipboard.copied ? "Copied" : "Copy"}
                 withArrow
               >
-                <Hash
-                  color="grey"
-                  style={{ marginBottom: "-7px" }}
-                  onClick={() =>
-                    clipboard.copy(
-                      `${window.location.href.split("#")[0]}#${id}`
-                    )
-                  }
-                />
+                <span>
+                  <Hash
+                    color="grey"
+                    style={{ marginBottom: "-7px" }}
+                    onClick={() =>
+                      clipboard.copy(
+                        `${window.location.href.split("#")[0]}#${id}`
+                      )
+                    }
+                  />
+                </span>
               </Tooltip>
             </Link>
             {upcoming ? (
@@ -158,7 +160,9 @@ export default function ProjectCard({
                 withArrow
                 ml="sm"
               >
-                <Tools style={{ marginBottom: "-7px" }} />
+                <span>
+                  <Tools style={{ marginBottom: "-7px" }} />
+                </span>
               </Tooltip>
             ) : (
               ""
