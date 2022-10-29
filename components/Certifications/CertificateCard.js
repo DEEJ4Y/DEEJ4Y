@@ -13,33 +13,39 @@ export default function CertificateCard({
 
   return (
     <Link passHref href={link}>
-      <Paper className="clickable" withBorder style={{ position: "relative" }}>
-        <Badge
-          variant="filled"
-          color={theme.colorScheme}
-          style={{
-            position: "absolute",
-            right: theme.spacing.sm,
-            top: theme.spacing.sm,
-          }}
+      <a target="_blank" rel="noopener noreferrer">
+        <Paper
+          className="clickable"
+          withBorder
+          style={{ position: "relative" }}
         >
-          {category}
-        </Badge>
-        <img
-          src={imageUrl}
-          alt={"Certificate for " + name}
-          width="100%"
-          style={{ borderRadius: "4px" }}
-        />
-        <Container fluid p="md">
-          <Text weight="bold">{name}</Text>
-          {description
-            ? description.map((string, idx) => (
-                <Text key={string + idx}>{string}</Text>
-              ))
-            : ""}
-        </Container>
-      </Paper>
+          <Badge
+            variant="filled"
+            color={theme.colorScheme}
+            style={{
+              position: "absolute",
+              right: theme.spacing.sm,
+              top: theme.spacing.sm,
+            }}
+          >
+            {category}
+          </Badge>
+          <img
+            src={imageUrl}
+            alt={"Certificate for " + name}
+            width="100%"
+            style={{ borderRadius: "4px" }}
+          />
+          <Container fluid p="md">
+            <Text weight="bold">{name}</Text>
+            {description
+              ? description.map((string, idx) => (
+                  <Text key={string + idx}>{string}</Text>
+                ))
+              : ""}
+          </Container>
+        </Paper>
+      </a>
     </Link>
   );
 }

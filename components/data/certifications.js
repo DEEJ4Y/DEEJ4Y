@@ -6,15 +6,33 @@ const certifications = [
   //   category: "",
   // },
   {
-    name: "Hackerrank - JavaScript (Basic) Certificate",
-    imageUrl: "/certificates/hackerrank-javascript-basic-certificate.png",
-    link: "https://www.hackerrank.com/certificates/8466762421a9",
+    name: "Hackerrank - REST API (Intermediate) Certificate",
+    imageUrl: "/certificates/hackerrank-rest-api-intermediate-certificate.png",
+    link: "https://www.hackerrank.com/certificates/e31c911e8a48",
     category: "Programming",
   },
   {
     name: "Hackerrank - Problem Solving (Basic) Certificate",
     imageUrl: "/certificates/hackerrank-problem-solving-basic-certificate.png",
     link: "https://www.hackerrank.com/certificates/25dfd425a04a",
+    category: "Programming",
+  },
+  {
+    name: "Hackerrank - JavaScript (Basic) Certificate",
+    imageUrl: "/certificates/hackerrank-javascript-basic-certificate.png",
+    link: "https://www.hackerrank.com/certificates/8466762421a9",
+    category: "Programming",
+  },
+  {
+    name: "Hackerrank - Python (Basic) Certificate",
+    imageUrl: "/certificates/hackerrank-python-basic-certificate.png",
+    link: "https://www.hackerrank.com/certificates/5823cf3b20c4",
+    category: "Programming",
+  },
+  {
+    name: "Hackerrank - CSS  Certificate",
+    imageUrl: "/certificates/hackerrank-css-basic-certificate.png",
+    link: "https://www.hackerrank.com/certificates/67f2e8bdfe7e",
     category: "Programming",
   },
   {
