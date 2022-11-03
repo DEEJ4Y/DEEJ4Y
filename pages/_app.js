@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ColorSchemeProvider, MantineProvider } from "@mantine/core";
 import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import Layout from "../components/common/Layout/Layout";
@@ -14,6 +15,11 @@ function MyApp({ Component, pageProps }) {
     setColorScheme(() => (colorScheme === "dark" ? "light" : "dark"));
 
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
+
+  useEffect(() => {
+    document.documentElement.style.visibility = "visible";
+  }, []);
+
   return (
     <ColorSchemeProvider
       colorScheme={colorScheme}
