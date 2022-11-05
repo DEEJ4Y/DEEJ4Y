@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { links } from "../common/Navbar/Navbar";
 import Link from "next/link";
+import { SearchProjectsInput } from "../Search/QueryForm";
 
 const data = links[1].links;
 
@@ -71,6 +72,8 @@ export default function ProjectsTitle({}) {
       <Text size="sm" className={classes.description}>
         The projects are arranged in different categories below.
       </Text>
+
+      <SearchProjectsInput />
 
       <Grid mt={60} spacing="md" justify="center">
         {features}

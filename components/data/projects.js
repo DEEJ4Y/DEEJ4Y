@@ -1201,7 +1201,7 @@ const projects = [
       : "/screenshots/webfab-2022.png",
     link: "https://webfab-2022-frontend.vercel.app/",
     category: "personal",
-    tags: ["Frontend", "Next.js", "Mantine"],
+    tags: ["frontend", "next", "mantine"],
     isHackathon: true,
     major: false,
     upcoming: false,
@@ -1223,17 +1223,36 @@ const projects = [
     link: false,
     category: "learning",
     tags: [
-      "Backend",
-      "NGINX",
-      "Reverse-Proxy",
-      "SSL",
+      "backend",
+      "nginx",
+      "reverse-proxy",
+      "ssl",
       "certbot",
-      "DigitalOcean",
+      "digitalocean",
     ],
     major: false,
     upcoming: false,
     completed: true,
     repository: { platform: false, url: false },
+    language: "javascript",
+  },
+  {
+    name: "Linkedin autofill HackerRank certificate",
+    description: [
+      "This is a browser extension to automatically fill your HackerRank certificate data, in Linkedin.",
+    ],
+    with: [],
+    imageUrl: false,
+    link: "https://user-images.githubusercontent.com/70807315/198891581-ac3da934-7659-4cfe-8b35-e8c5f90045da.mp4",
+    category: "learning",
+    tags: ["frontend", "extension", "autofill"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/linkedin-autofill-hackerrank-certificate",
+    },
     language: "javascript",
   },
   /** 
@@ -1256,6 +1275,12 @@ const projects = [
 
 projects.sort((a, b) => {
   return a.name.localeCompare(b.name);
+});
+
+projects.sort((a, b) => {
+  if (a.imageUrl === false) return 1;
+  if (b.imageUrl === false) return -1;
+  return 0;
 });
 
 projects.sort((a, b) => {
