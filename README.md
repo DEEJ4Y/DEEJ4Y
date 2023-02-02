@@ -4,15 +4,13 @@ I'm David Joseph.
 
 ## Skills
 
-Tech:
-
-| **Backend**   | **Database** | **Frontend**    | **Misc**                          |
-| :------------ | :----------- | :-------------- | :-------------------------------- |
-| Node.js       | MongoDB      | React & Next.js | Deploying to Heroku               |
-| Express.js    | Mongoose     | Bootstrap 5     | Responsive Web Design/Development |
-| RESTful API's |              | JavaScript ES6  | Git                               |
-| NGINX         |              | jQuery          | Docker                            |
-|               |              | HTML & CSS      |                                   |
+| **Backend**   | **Database** | **Frontend**              | **Misc**                          |
+| :------------ | :----------- | :------------------------ | :-------------------------------- |
+| Node.js       | MongoDB      | React & Next.js           | Heroku, DigitalOcean              |
+| Express.js    | MySQL        | TypeScript/JavaScript ES6 | Responsive Web Design/Development |
+| RESTful API's | Mongoose ODM | Electron                  | Git                               |
+| NGINX         | Prisma ORM   | jQuery, Bootstrap         | Docker                            |
+|               |              | HTML, CSS                 | npm                               |
 
 Completed [The 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/).
 

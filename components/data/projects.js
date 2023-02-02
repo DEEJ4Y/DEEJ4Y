@@ -71,6 +71,11 @@ const RajMukherjee = {
   url: "https://www.linkedin.com/in/raj-mukherjee-28647a218/",
 };
 
+const SarthakSachdeva = {
+  name: "Sarthak Sachdeva",
+  url: "https://www.linkedin.com/in/sarthak-sachdeva-748b17222",
+};
+
 const SudhanshuBasuRoy = {
   name: "Sudhanshu Basu Roy",
   url: "https://www.linkedin.com/in/sudhanshu-basu-roy-b194881b1/",
@@ -1242,7 +1247,8 @@ const projects = [
       "This is a browser extension to automatically fill your HackerRank certificate data, in Linkedin.",
     ],
     with: [],
-    imageUrl: false,
+    imageUrl:
+      "https://user-images.githubusercontent.com/70807315/198891581-ac3da934-7659-4cfe-8b35-e8c5f90045da.mp4",
     link: "https://user-images.githubusercontent.com/70807315/198891581-ac3da934-7659-4cfe-8b35-e8c5f90045da.mp4",
     category: "learning",
     tags: ["frontend", "extension", "autofill"],
@@ -1254,6 +1260,82 @@ const projects = [
       url: "https://github.com/DEEJ4Y/linkedin-autofill-hackerrank-certificate",
     },
     language: "javascript",
+  },
+  {
+    name: "PouchDB Services",
+    description: [
+      "A set of PouchDB service functions and a class version of them, with mongodb style ObjectID id's for all your documents.",
+    ],
+    with: [],
+    imageUrl: "/screenshots/pouchdb-services.png",
+    link: "https://www.npmjs.com/package/pouchdb-services",
+    category: "personal",
+    tags: ["frontend", "pouchdb", "library"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/pouchdb-services",
+    },
+    language: "typescript",
+  },
+  {
+    name: "Node MySQL REST API",
+    description: [
+      "Example project for working with nodejs, express and mysql.",
+    ],
+    with: [],
+    imageUrl: false,
+    link: false,
+    category: "learning",
+    tags: ["backend", "mysql", "rest"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/node-mysql-api",
+    },
+    language: "javascript",
+  },
+  {
+    name: "Node MySQL Prisma REST API",
+    description: [
+      "Example project for working with nodejs, express, MySQL & Prisma ORM",
+    ],
+    with: [],
+    imageUrl: false,
+    link: false,
+    category: "learning",
+    tags: ["backend", "mysql", "prisma", "rest"],
+    major: false,
+    upcoming: false,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: "https://github.com/DEEJ4Y/node-prisma-api",
+    },
+    language: "javascript",
+  },
+  {
+    name: "MLSA Mailer",
+    description: [
+      "Custom email scheduling solution with nodemailer and mongo-cron. Built the RESTful APIs for the project.",
+    ],
+    with: [SarthakSachdeva],
+    imageUrl: false,
+    link: false,
+    category: "team",
+    tags: ["backend", "email", "rest", "mongo-cron"],
+    major: false,
+    upcoming: true,
+    completed: true,
+    repository: {
+      platform: "github",
+      url: false,
+    },
+    language: "typescript",
   },
   /** 
  {
@@ -1324,10 +1406,14 @@ const toKebabCase = (str) => {
 const getAllSkills = () => {
   const skills = {};
 
-  projects.forEach(({ tags }) => {
+  projects.forEach(({ tags, language }) => {
     tags.forEach((tag) => {
       skills[tag.toUpperCase()] = true;
     });
+
+    if (language) {
+      skills[language.toUpperCase()] = true;
+    }
   });
 
   return Object.keys(skills);
