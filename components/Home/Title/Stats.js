@@ -67,6 +67,32 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const numberOfMajorProjects = getNumberOfMajorProjects();
+const startDate = new Date(2020, 7); // August 2020
+const currentDate = new Date();
+
+const diffInMilliseconds = currentDate - startDate;
+const experienceInYears = Math.floor(
+  diffInMilliseconds / (1000 * 60 * 60 * 24 * 365.25)
+);
+
+const numberToWords = [
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+];
 
 const statsData = [
   {
@@ -88,8 +114,8 @@ const statsData = [
   },
   {
     title: "Years Experience",
-    stats: "2+",
-    description: "Developing websites and web apps for more two years.",
+    stats: experienceInYears + "+",
+    description: `Developing websites and web apps for more than ${numberToWords[experienceInYears]} years.`,
     Icon: UserCheck,
   },
 ];

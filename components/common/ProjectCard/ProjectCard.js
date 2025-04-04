@@ -107,13 +107,29 @@ export default function ProjectCard({
   return (
     <Card id={id} withBorder radius="md" p="md" className={classes.card}>
       {imageUrl ? (
-        <Card.Section mb="md">
-          <Image
-            src={assetPrefix ? assetPrefix + imageUrl : imageUrl}
-            alt={name}
-            height={460}
-          />
-        </Card.Section>
+        imageUrl.endsWith(".mp4") ? (
+          <Card.Section mb="md">
+            <video
+              aria-label={name}
+              style={{ width: "100%", height: "auto" }}
+              controls
+            >
+              <source
+                src={assetPrefix ? assetPrefix + imageUrl : imageUrl}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </Card.Section>
+        ) : (
+          <Card.Section mb="md">
+            <Image
+              src={assetPrefix ? assetPrefix + imageUrl : imageUrl}
+              alt={name}
+              height={460}
+            />
+          </Card.Section>
+        )
       ) : (
         ""
       )}
@@ -231,9 +247,16 @@ export default function ProjectCard({
         </a>
       ) : (
         <Group mt="xs">
-          <Button radius="md" variant="light" style={{ flex: 1 }}>
-            <ProjectRepositoryIcon /> {projectRepository}
-          </Button>
+          <Tooltip label="Repository is private">
+            <Button
+              radius="md"
+              variant="light"
+              style={{ flex: 1 }}
+              disabled={true}
+            >
+              <ProjectRepositoryIcon /> {projectRepository}
+            </Button>
+          </Tooltip>
         </Group>
       )}
     </Card>

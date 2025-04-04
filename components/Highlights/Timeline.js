@@ -86,6 +86,24 @@ export const highlights = [
     description: "Tkinter Snake Game",
     link: "/projects/personal#snake-game",
   },
+  {
+    title: "Learnt TypeScript",
+    time: "August 2022",
+  },
+  {
+    title: "Learnt to build Browser Extensions",
+    time: "October 2022",
+  },
+  {
+    title: "Learnt Electron",
+    time: "November 2022",
+  },
+  {
+    title: "Second npm package",
+    time: "December 2022",
+    description: "PouchDB Services",
+    link: "/projects/personal#pouchdb-services",
+  },
 ].reverse();
 
 export default function HighlightsTimeline() {
